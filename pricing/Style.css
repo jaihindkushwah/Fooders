@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 900px;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(215, 211, 211);
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+.title{
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.title h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.check > *{
+    margin: 0 3px;
+}
+/* Custom checkbox */
+.switch{
+    display: inline-block;
+    height: 1.9rem;
+    position: relative;
+    width: 3.8rem;
+
+}
+.switch input{
+    display: none;
+}
+.slider{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    transition: all 0.4s;
+}
+input:checked + .slider{
+    background: #4edf55;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+/* Price Section */
+.price{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+.price-box{
+    width:36rem;
+    text-align: center;
+    border-radius: 3px;
+    background-color: white;
+    margin: 2rem 1.5rem;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.price-box p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+}
+.price-box h4 span{
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
+.price-box h4 span:nth-child(2){
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.price-box ul{
+    list-style: none;
+    margin-bottom: 3rem;
+}
+.price-box ul li{
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1.2rem 0;
+    text-transform: capitalize;
+    border-top: 1px solid rgb(201, 200, 200);
+}
+.price-box ul li:last-child{
+    border-bottom: 1px solid gray;
+}
+.price-box a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    background-color:rgb(47, 177, 58);
+    padding: 1.2rem 3rem;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    color: white;
+    transition: all 0.3s;
+}
+.price-box a:hover{
+    font-size: 1.4rem;
+}
+.box{
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    color: white;
+}
+.box1,
+.btn1{
+    background: linear-gradient(to right bottom,rgba(95,201,52,1),
+    rgba(39,120,7,1));
+}
+.box2,
+.btn2{
+    background: linear-gradient(to right bottom,rgba(238,142,33,1),
+    rgba(104,50,5,1));
+}
+.box3,
+.btn3{
+    background: linear-gradient(to right bottom,rgba(234,67,187,1),
+    rgba(80,3,71,.8));
+}
+
+.price-box:nth-child(2){
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:830px) {
+    .price{
+        flex-direction: column;
+    }
+    .price-box{
+        width: 24rem;
+    }
+    .price-box:nth-child(2){
+        transform: scale(1);
+    }
+}
+
+
+
+
+
