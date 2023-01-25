@@ -1,10 +1,37 @@
+// Create Element
+const nightlifeImg=document.querySelector(".nightlifeImg");
+const diningImg=document.querySelector(".diningImg");
+const deliveryImg=document.querySelector(".deliveryImg");
+
+window.onload=delivery.forEach(el=>{
+    deliveryImg.innerHTML+=createElement(el["img"],el["p"]);
+})
+
+window.onload=dining.forEach(el=>{
+    diningImg.innerHTML+=createElement(el["img"],el["p"]);
+})
+window.onload=nightlife.forEach(el=>{
+    nightlifeImg.innerHTML+=createElement(el["img"],el["p"]);
+})
+
+
+function createElement(src,content){
+    let el=`<div><img src="${src}" alt=""></img><p>${content}</p></div>`;
+    return el;
+}
+
+
+
+
+
+
+
 // Selector
 const Buttons=document.querySelectorAll('.menuImag');
 const scrollBtn=document.querySelector('.scroll-up');
 const bar1=document.querySelector('.bar1');
 const bar2=document.querySelector('.bar2');
 const sideNav=document.querySelector('.sidenav');
-
 // Featured Button Show
 Buttons.forEach((el)=>{
     el.parentElement.addEventListener('mouseover',(e)=>{
@@ -13,6 +40,7 @@ Buttons.forEach((el)=>{
         }
     });
 })
+
 Buttons.forEach((el)=>{
     el.parentElement.addEventListener('mouseout',(e)=>{
         if(e.target){
@@ -161,6 +189,14 @@ function scrollLeftRight(){
     });
 }
 
+// Payment Itegration
+
+const order=document.querySelectorAll('#order-now');
+order.forEach((el)=>{
+    el.addEventListener('click',(e)=>{
+        console.log(e.target.value);
+    })
+})
 
 
 
