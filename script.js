@@ -199,7 +199,24 @@ order.forEach((el)=>{
 })
 
 
+// login page
+const loginSection=document.querySelector('.loginSection');
+const loginBtn=document.querySelectorAll('.login');
+loginSection.style.display="none";
+const mainSection=document.querySelector('.mainSection');
+const closeBtn=document.querySelector('.close');
 
+// 
+loginBtn.forEach(el=>{
+    el.addEventListener('click',(e)=>{
+        if(e.target){
+            loginSection.style.display="inline";
+        }
+    })
+})
+closeBtn.addEventListener('click',()=>{
+    loginSection.style.display="none";
+})
 
 
 

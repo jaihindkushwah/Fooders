@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .loginMain{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(70, 70, 70, 0.468);
+            font-family: 'Gill Sans', 'Gill Sans MT',Calibri, sans-serif;
+        }
+        .loginContainer{
+            width: 45vw;
+            display: grid;
+            grid-template-columns: 2fr 2.5fr;
+            height: 80vh;
+            /* border: 2px solid blue; */
+            border-radius: 5px;
+        }
+        .loginContent{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            /* font-size: 2rem; */
+            color: white;
+            background-color: darkslategray;
+            /* border-radius: 5px; */
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            letter-spacing: 1px;
+        }
+        .loginContent > *{
+            margin: 10px;
+        }
+        .loginContent hr{
+            width: 50%;
+            height: 8px;
+            background-color: rgb(37, 211, 37);
+            border-radius: 10px;
+        }
+        .loginContent p{
+            font-size: 1.3rem;
+        }
+        .loginContent h3{
+            /* text-align: center; */
+            font-size: 1.6rem;
+        }
+        .formContainer{
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            /* border-radius: 5px; */
+            width: 100%;
+            /* background-color: rgb(61, 55, 55); */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 40px 20px;
+        }
+        .social-account{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+            /* background-color: aqua; */
+        }
+        .social-account button {
+            margin: 5px 0px;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            /* display: flex;
+            justify-content: space-evenly;
+            align-items: center; */
+            width: 100%;
+            min-height: 40px;
+            padding: 10px 20px 10px 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: rgb(44, 44, 82);
+            /* word-spacing: 5px; */
+            letter-spacing: .5px;
+            border: 1px black solid;
+        }
+        .formContainer div:nth-last-child(2){
+            width: 100%;
+            /* background-color: brown; */
+        }
+        .formContainer div form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+        }
+        .close{
+            cursor: pointer;
+            font-size: 2rem;
+            margin-top: -30px;
+            margin-right:-25px;
+            /* width: 30px; */
+            /* height: 30px; */
+            /* background-color: red; */
+        }
+        input{
+            height: 38px;
+            /* background-color: bisque; */
+            border-radius: 5px;
+            border: none;
+            border: 1px solid #333;
+            font-size: 1rem;
+            padding: 10px;
+
+        }
+        button{
+            cursor: pointer;
+        }
+        button[type="submit"]{
+            border: 0;
+            padding:10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 5px;
+            background-color: rgb(113, 234, 113);
+            margin-bottom: 15px;
+        }
+        .checkbox{
+            margin-bottom: 20px;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1rem;
+            text-indent: 10px;
+            
+            /* background-color: aquamarine; */
+        }
+        input[type='checkbox']{
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .formContainer a{
+            color: blue;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .divide{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .divide hr{
+            width:43%;
+            height: 2.5px;
+            background-color: #333;
+        }
+        @media screen and (max-width:1280px) {
+            .loginContainer{
+                width: 60vw;
+                display: grid;
+                grid-template-columns: 2fr 2.5fr;
+                height: 80vh;
+                /* border: 2px solid blue; */
+                border-radius: 5px;
+            }
+        }
+        @media screen and (max-width:920px) {
+            .loginContainer{
+                width: 80%;
+                display: grid;
+                grid-template-columns: 2fr 2.5fr;
+                height: 80vh;
+                /* border: 2px solid blue; */
+                border-radius: 5px;
+            }
+        }
+
+        @media screen and (max-width:660px) {
+            .loginContainer{
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr;
+                height: 90vh;
+                /* border: 2px solid blue; */
+                border-radius: 5px;
+            }
+            .loginContent{
+                grid-row-start: 1;
+                width: 100%;
+                min-height: 150px;
+                grid-row-end: 2;
+            }
+            .formContainer{
+                grid-row-start: 2;
+            }
+            .loginContent hr{
+                width: 50%;
+                height: 5px;
+                background-color: rgb(37, 211, 37);
+                border-radius: 10px;
+            }
+            .loginContent p{
+                font-size: 1.1rem;
+            }
+            .loginContent h3{
+                
+                font-size: 1.4rem;
+            }
+        }
+        
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="loginMain">
+        <div class="loginContainer">
+            <div class="loginContent">
+                <h3>Welcome to Fooder</h3>
+                <hr>
+                <p>Sign in to continue.</p>
+            </div>
+            <div class="formContainer">
+                <div class="social-account">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                    <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                    <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                    <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
+
+                </div>
+                <div class="divide">
+                    <hr>&nbsp; or &nbsp;<hr>
+                </div>
+                <div>
+                    <form action="">
+                        <input type="email" placeholder="Email address" required><br>
+                        <input type="password" placeholder="Password" required><br>
+                        <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
+                        <button type="submit">Sign in</button>
+                        <a href="">Forget password?</a>
+                    </form>
+                </div>
+                <div>
+                    Not a member yet?  <a href="#">  &nbsp; Sign Up.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

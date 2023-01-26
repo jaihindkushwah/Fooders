@@ -1,224 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fooder</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
-    <link rel="shortcut icon" href="https://img.freepik.com/premium-vector/vegetable-salad-plate-with-knife-fork_357573-64.jpg" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://img.freepik.com/premium-vector/vegetable-salad-plate-with-knife-fork_357573-64.jpg"
+        type="image/x-icon">
 </head>
-<body>
-    <!-- Navbar -->
-    <div class="scroll-up">
-        <i class="fa-solid fa-circle-chevron-up"></i>
-        Top
-    </div>
-    <nav>
-        <div class="bars">
-            <div class="bar1">
-                <i class="fa-sharp fa-solid fa-bars"></i>
-            </div>
-            <div class="bar2">
-                <i class="fa-sharp fa-solid fa-xmark"></i>
-            </div>
-        </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="#" >Home</a>
-            <a href="#" >About</a>
-            <a href="#">Pricing</a>
-            <a href="#" >Contacts</a>
 
-        </div>
-        <div class="navbar">
-            <div class="site-name">
-                <a href="">
-                    <h2>Fooder<sup>FREE</sup></h2>
-                    <h5>INDIAN FOOD</h5>
-                </a>
-            </div>
-            
-            <div class="nav-items">
-                <li class="home"><a href="">HOME</a></li>
-                <li class="about"><a href="">ABOUT</a></li>
-                <li class="pricing"><a href="">PRICING</a></li>
-                <li class="contact"><a href="">CONTACTS</a></li>
-            </div>
-            <!-- book directly -->
-            <div class="book">
-                <a href="" class="book">BOOK NOW</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Main content -->
-    <div class="main">
-        <!-- main Image container -->
-        <div>
-            <div class="imageContainer">
-                <h1>WELCOME</h1>
-                <hr width="100" color="red" >
-                <button>Click Here To Order</button>
-                <!-- <p>Our restaurant offers full-service dining with breathtaking views <br> seen from our indoor covered patio and our outdoor sundeck.</p> -->
-            </div>
-        </div>
-        <!-- about us -->
-        <div class="about-us">
-            <div class="image">
-                <img src="https://media.istockphoto.com/id/922783734/photo/assorted-indian-recipes-food-various.jpg?s=612x612&w=0&k=20&c=p8DepvymWfC5j7c6En2UsQ6sUM794SQMwceeBW3yQ9M=" alt="">
-            </div>
-            <div id="content">
-                <div class="content">
-                    <h1>About Us</h1>
-                    <p>Pesto is a family owned and operated Italian Restaurant offering a combination of fresh ingredients and authentic Italian cooking.</p>
-                        <p>We will make sure you are served the most authentic and fresh Italian dishes, while offering the best customer service. Our kitchen is committed to providing our guests with the best Italian Cuisine.</p>
+<body>
+    <section class="loginSection">
+        <div class="loginMain">
+            <div class="loginContainer">
+                <div class="loginContent">
+                    <h3>Welcome to Fooder</h3>
+                    <hr>
+                    <p>Sign in to continue.</p>
+                </div>
+                <div class="formContainer">
+                    <div class="social-account">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
+    
+                    </div>
+                    <div class="divide">
+                        <hr>&nbsp; or &nbsp;<hr>
+                    </div>
+                    <div>
+                        <form action="">
+                            <input type="email" placeholder="Email address" required><br>
+                            <input type="password" placeholder="Password" required><br>
+                            <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
+                            <button type="submit">Sign in</button>
+                            <a href="">Forget password?</a>
+                        </form>
+                    </div>
+                    <div>
+                        Not a member yet?  <a href="#">  &nbsp; Sign Up.</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="featured">
-            <h1>Featured Offers</h1>
-            <p>We offer a great variety of the best Indian dishes to our visitors and guests. Below are some of<br> our most popular main dishes and desserts</p>
-            <div class="featured-menu">
-                <div>
-                    <div class="menuImag img1">
-                        <button id="order-now" value="8">ORDER NOW</button>
-                    </div>
-                    <h3>Ravioli</h3>
-                    <h3>$8</h3>
+    </section>
+    <section class="mainSection">
+        <!-- Navbar -->
+        <div class="scroll-up">
+            <i class="fa-solid fa-circle-chevron-up"></i>
+            Top
+        </div>
+        <nav>
+            <div class="bars">
+                <div class="bar1">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
                 </div>
-                <div>
-                    <div class="menuImag img2">
-                        <button  id="order-now" value="13">ORDER NOW</button>
-                    </div>
-                    <h3>Black Pasta</h3>
-                    <h3>$13</h3>
-                </div>
-                <div>
-                    <div class="menuImag img3">
-                        <button value="20" id="order-now">ORDER NOW</button>
-                    </div>
-                    <h3>Gelato</h3>
-                    <h3>$20</h3>
-                </div>
-                <div>
-                    <div class="menuImag img4">
-                        <button id="order-now" value="10">ORDER NOW</button>
-                    </div>
-                    <h3>Noodles</h3>
-                    <h3>$10</h3>
-                </div>
-                <div>
-                    <div class="menuImag img5">
-                        <button value="7" id="order-now">ORDER NOW</button>
-                    </div>
-                    <h3>Chole Bhature</h3>
-                    <h3>$7</h3>
-                </div>
-                <div>
-                    <div class="menuImag img6">
-                        <button value="10" id="order-now">ORDER NOW</button>
-                    </div>
-                    <h3>Egg Curry</h3>
-                    <h3>$10</h3>
+                <div class="bar2">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
                 </div>
             </div>
-        </div>
-        <!-- <div><i class="fa-solid fa-burger-glass"></i></div> -->
-        <!-- Resturant Menu -->
-        <!-- <div class="menu-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contacts</a>
+
+            </div>
+            <div class="navbar">
+                <div class="site-name">
+                    <a href="">
+                        <h2>Fooder<sup>FREE</sup></h2>
+                        <h5>INDIAN FOOD</h5>
+                    </a>
+                </div>
+
+                <div class="nav-items">
+                    <li class="home"><a href="">HOME</a></li>
+                    <li class="about"><a href="">ABOUT</a></li>
+                    <li class="pricing"><a href="">PRICING</a></li>
+                    <li class="contact"><a href="">CONTACTS</a></li>
+                </div>
+                <!-- book directly -->
+                <div class="book" id="book">
+                    <button class="login" id="login"><i class="fa-solid fa-user"></i> Login</button>
+                    <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
+                </div>
+                <div class="login user">
+                    <i class="fa-solid fa-user-circle"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <div class="main">
+            <!-- main Image container -->
+            <div>
+                <div class="imageContainer">
+                    <h1>WELCOME</h1>
+                    <hr width="100" color="red">
+                    <button>Click Here To Order</button>
+                    <!-- <p>Our restaurant offers full-service dining with breathtaking views <br> seen from our indoor covered patio and our outdoor sundeck.</p> -->
+                </div>
+            </div>
+            <!-- about us -->
+            <div class="about-us">
+                <div class="image">
+                    <img src="https://media.istockphoto.com/id/922783734/photo/assorted-indian-recipes-food-various.jpg?s=612x612&w=0&k=20&c=p8DepvymWfC5j7c6En2UsQ6sUM794SQMwceeBW3yQ9M="
+                        alt="">
+                </div>
+                <div id="content">
+                    <div class="content">
+                        <h1>About Us</h1>
+                        <p>Pesto is a family owned and operated Italian Restaurant offering a combination of fresh
+                            ingredients and authentic Italian cooking.</p>
+                        <p>We will make sure you are served the most authentic and fresh Italian dishes, while offering
+                            the best customer service. Our kitchen is committed to providing our guests with the best
+                            Italian Cuisine.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="featured">
+                <h1>Featured Offers</h1>
+                <p>We offer a great variety of the best Indian dishes to our visitors and guests. Below are some of<br>
+                    our most popular main dishes and desserts</p>
+                <div class="featured-menu">
+                    <div>
+                        <div class="menuImag img1">
+                            <button id="order-now" value="8">ORDER NOW</button>
+                        </div>
+                        <h3>Ravioli</h3>
+                        <h3>$8</h3>
+                    </div>
+                    <div>
+                        <div class="menuImag img2">
+                            <button id="order-now" value="13">ORDER NOW</button>
+                        </div>
+                        <h3>Black Pasta</h3>
+                        <h3>$13</h3>
+                    </div>
+                    <div>
+                        <div class="menuImag img3">
+                            <button value="20" id="order-now">ORDER NOW</button>
+                        </div>
+                        <h3>Gelato</h3>
+                        <h3>$20</h3>
+                    </div>
+                    <div>
+                        <div class="menuImag img4">
+                            <button id="order-now" value="10">ORDER NOW</button>
+                        </div>
+                        <h3>Noodles</h3>
+                        <h3>$10</h3>
+                    </div>
+                    <div>
+                        <div class="menuImag img5">
+                            <button value="7" id="order-now">ORDER NOW</button>
+                        </div>
+                        <h3>Chole Bhature</h3>
+                        <h3>$7</h3>
+                    </div>
+                    <div>
+                        <div class="menuImag img6">
+                            <button value="10" id="order-now">ORDER NOW</button>
+                        </div>
+                        <h3>Egg Curry</h3>
+                        <h3>$10</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- <div><i class="fa-solid fa-burger-glass"></i></div> -->
+            <!-- Resturant Menu -->
+            <!-- <div class="menu-container">
             <h2>Our Restaurant Menu</h2>
             <div class="menu-item">
                 <img width="100%" src="zomato.jpeg" alt="zomato">
             </div>
         </div> -->
-        <div class="collections">
-            <div class="facility" >
-                <div class="delivery btn active" id="btn1">
-                    <div id="btn1" class="deliveryIcon">
-                        <img id="btn1" src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp" alt="DeliveryIcon">
-                    </div><p id="btn1">Delivery</p></div>
-                <div class="dining btn" id="btn2">
-                    <div id="btn2" class="diningIcon">
-                        <img id="btn2" src="https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png" alt="DiningIcon">
-                    </div><p id="btn2">Dining Out</p></div>
-                <div class="nightlife btn" id="btn3">
-                    <div id="btn3" class="nightlifeIcon">
-                        <img id="btn3" src="https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png" alt="nightlifeIcon">
-                    </div> <p id="btn3">Nightlife</p> </div>
-            </div>
-            <div class="deliveryContainer" >
-                <div>
-                    <h3>Inspiration for your first order</h3>
-                </div> 
-                <div class="collectionsImg1-main">
-                    <div class="scroll-left activeLeft">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+            <div class="collections">
+                <div class="facility">
+                    <div class="delivery btn active" id="btn1">
+                        <div id="btn1" class="deliveryIcon">
+                            <img id="btn1"
+                                src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp"
+                                alt="DeliveryIcon">
+                        </div>
+                        <p id="btn1">Delivery</p>
                     </div>
-                    <div class="deliveryImg activeScroller">
+                    <div class="dining btn" id="btn2">
+                        <div id="btn2" class="diningIcon">
+                            <img id="btn2"
+                                src="https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png"
+                                alt="DiningIcon">
+                        </div>
+                        <p id="btn2">Dining Out</p>
                     </div>
-                    <div class="scroll-right activeRight">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
+                    <div class="nightlife btn" id="btn3">
+                        <div id="btn3" class="nightlifeIcon">
+                            <img id="btn3"
+                                src="https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png"
+                                alt="nightlifeIcon">
+                        </div>
+                        <p id="btn3">Nightlife</p>
                     </div>
                 </div>
-            </div>
-             <div class="diningContainer" style="display: none;">
-                <div>
-                    <h3>Collections</h3>
-                    <p>Explore curated lists of top restaurants, cafes, pubs, and bars in India, based on trends</p>
+                <div class="deliveryContainer">
+                    <div>
+                        <h3>Inspiration for your first order</h3>
+                    </div>
+                    <div class="collectionsImg1-main">
+                        <div class="scroll-left activeLeft">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="deliveryImg activeScroller">
+                        </div>
+                        <div class="scroll-right activeRight">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="collectionsImg-main">
-                    <div class="scroll-left">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="diningContainer" style="display: none;">
+                    <div>
+                        <h3>Collections</h3>
+                        <p>Explore curated lists of top restaurants, cafes, pubs, and bars in India, based on trends</p>
                     </div>
-                    <div class="diningImg">
-                    </div>
-                    <div class="scroll-right">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
+                    <div class="collectionsImg-main">
+                        <div class="scroll-left">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="diningImg">
+                        </div>
+                        <div class="scroll-right">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="nightlifeContainer" style="display: none;">
-                <div>
-                    <h3>Collections</h3>
-                    <p>Explore curated lists of top restaurants, cafes, pubs, and bars in India, based on trends</p>
-                </div>
-                <div class="collectionsImg-main">
-                    <div class="scroll-left">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="nightlifeContainer" style="display: none;">
+                    <div>
+                        <h3>Collections</h3>
+                        <p>Explore curated lists of top restaurants, cafes, pubs, and bars in India, based on trends</p>
                     </div>
-                    <div class="nightlifeImg">
-                    </div>
-                    <div class="scroll-right">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
+                    <div class="collectionsImg-main">
+                        <div class="scroll-left">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="nightlifeImg">
+                        </div>
+                        <div class="scroll-right">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- footer content -->
-    <div class="footer">
-        <div class="site-name">
-            <a href="/">
-                <h2>Fooder<sup>FREE</sup></h2>
-                <h5>INDIAN FOOD</h5>
-            </a>
+        <!-- footer content -->
+        <div class="footer">
+            <div class="site-name">
+                <a href="/">
+                    <h2>Fooder<sup>FREE</sup></h2>
+                    <h5>INDIAN FOOD</h5>
+                </a>
+            </div>
+            <div class="footer-links">
+                <li><a href="">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </div>
+            <div class="social-links">
+                <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+            </div>
         </div>
-        <div class="footer-links">
-              <li><a href="">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#">Terms of Use</a></li>
-          </div>
-        <div class="social-links">
-            <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-            <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
-            <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
-            <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-        </div>
-    </div>
+    </section>
     <script src="Collections.js"></script>
 </body>
+
 </html>
