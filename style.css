@@ -1189,4 +1189,25 @@ button {
         /* border: 2px solid blue; */
         border-radius: 5px;
     }
+    .loginContent{
+        grid-row-start: 1;
+        width: 100%;
+        min-height: 100px;
+        grid-row-end: 2;
+    }
+    .formContainer{
+        grid-row-start: 2;
+    }
+    .loginContent hr{
+        display: none;
+    }
+    .loginContent p{
+        font-size: 1.1rem;
+    }
+    .loginContent h3{
+        font-size: 1.4rem;
+    }
+    .loginContent>*{
+        margin: 5px;
+    }
 }
