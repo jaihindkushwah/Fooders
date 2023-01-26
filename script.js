@@ -202,7 +202,6 @@ order.forEach((el)=>{
 // login page
 const loginSection=document.querySelector('.loginSection');
 const loginBtn=document.querySelectorAll('.login');
-loginSection.style.display="none";
 const mainSection=document.querySelector('.mainSection');
 const closeBtn=document.querySelector('.close');
 
