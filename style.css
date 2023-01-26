@@ -752,7 +752,7 @@ hr {
     top: 0;
     left: 0;
     width:100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     transition: all 1s;
     z-index: 2;
@@ -1180,12 +1180,12 @@ button {
 
 
 /* media screen on Width 360px */
-@media screen and (max-width:360px) {
+@media screen and (max-width:480px) {
     .loginContainer {
         width: 90%;
         display: grid;
         grid-template-columns: 1fr;
-        height: 100vh;
+        height: 100%;
         /* border: 2px solid blue; */
         border-radius: 5px;
     }
