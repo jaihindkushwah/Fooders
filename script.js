@@ -210,6 +210,7 @@ loginBtn.forEach(el=>{
     el.addEventListener('click',(e)=>{
         if(e.target){
             loginSection.style.display="inline";
+            
         }
     })
 })

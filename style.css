@@ -754,9 +754,24 @@ hr {
     width:100%;
     height: 100%;
     position: fixed;
-    transition: all 1s;
+    animation: show_toast 0.8s ease forwards;
     z-index: 2;
 }
+@keyframes show_toast {
+    0%{
+        transform: translateY(-100%);
+    }
+    40%{
+        transform: translateY(5%);
+    }
+    80%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 .loginMain {
     transition: all 1s;
     width: 100%;
