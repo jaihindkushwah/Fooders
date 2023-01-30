@@ -217,6 +217,9 @@ loginBtn.forEach(el=>{
 closeBtn.addEventListener('click',()=>{
     loginSection.style.display="none";
 })
+loginSection.addEventListener("dblclick",()=>{
+    loginSection.style.display="none";
+})
 
 
 

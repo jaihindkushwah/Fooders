@@ -161,24 +161,25 @@ a {
     /* text-transform: capitalize; */
 }
 
-a:hover {
+/* a:hover {
     color: rgb(92, 232, 92);
-}
+} */
 
 .book {
     padding: 0 20px;
 
 }
 
-#book button {
+#book button , a#cart{
     border: 1px solid black;
     padding: 10px 20px;
     background-color: #ffffff;
     color: #151515;
     font-size: .9rem;
+    border-radius: 3px;
 }
 
-#book button:hover {
+#book button:hover,a#cart:hover {
     border: 1px solid black;
     background-color: var(--header);
     color: var(--white)
@@ -1085,7 +1086,7 @@ button {
     .user{
         cursor: pointer;
         /* background-color: rgb(189, 70, 70); */
-        display: block;
+        display: inline-flex;
         margin-right: 0;
         font-size: 2rem;
 
@@ -1137,17 +1138,24 @@ button {
     }
     /* Login box css */
     .loginContainer{
-        width: 80%;
+        width:80%;
         display: grid;
         grid-template-columns: 1fr;
-        height: 90vh;
+        height: 100%;
         /* border: 2px solid blue; */
         border-radius: 5px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         */
+         top: 0;
+        
     }
     .loginContent{
-        grid-row-start: 1;
+        grid-row-start:1;
         width: 100%;
-        min-height: 150px;
+        min-height: 100px;
         grid-row-end: 2;
     }
     .formContainer{

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .cartSection {
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: black; */
+            background-color: #bec1c3;
+        }
+
+        .cartContainer {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            /* z-index: 0; */
+            width: 100%;
+            height: 85%;
+
+            background-color: #bec1c3;
+            display: grid;
+            grid-template-columns: 4fr 2fr;
+            grid-gap: 20px;
+            /* background-color: black; */
+        }
+
+        .added-product {
+            /* width: 100%; */
+            border: 2px solid black;
+            margin-left: 100px;
+            background-color: white;
+        }
+
+        /* Price calculation section */
+        .pricingCalculation {
+            /* width:100%; */
+            border: 2px solid rgb(62, 61, 61);
+            background-color: white;
+            margin-right: 50px;
+            max-height: 420px;
+            min-width: 300px;
+            /* position: -webkit-sticky; */
+            position: sticky;
+            /* position:none; */
+            top: 0px;
+
+            
+        }
+
+        .totalItems {
+            padding: 20px;
+            /* height: 150px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .totalItems>div {
+            margin-top: 15px;
+            width: 100%;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            font-size: 1.05rem;
+        }
+
+        .priceDetails {
+            padding: 20px;
+            width: 100%;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            /* text-align: center; */
+            border-bottom: 1px solid rgb(146, 144, 144);
+            /* height: 50px; */
+        }
+
+        .checkOutBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        .finalAmount {
+            border-top: 1px dashed #bec1c3;
+            padding: 20px 0px;
+            border-bottom: 1px dashed #bec1c3;
+        }
+
+        .free {
+            color: green;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Items Added Section */
+        .added-product .items {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            flex-direction: row;
+            font-size: 1.1rem;
+            border-bottom: 1.5px solid #bec1c3;
+            flex-wrap: wrap;
+        }
+
+        .items>.price {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .modificationBtns {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .specification {
+            align-self: center;
+        }
+
+        .specification>* {
+            margin: 10px;
+        }
+
+        .items .image {
+            /* width: 100%; */
+        }
+
+        .items .image>img {
+            max-width: 100%;
+            height: 100%;
+        }
+        .items button{
+            padding: 5px 15px;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+        .items .counter>*{
+            margin: 5px;
+        }
+        .items .counter input{
+            padding: 5px 15px;
+            width: 50px;
+            font-size: 1rem;
+        }
+        .items .counter button{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    </style>
+    <script src="Cart.js"></script>
+</head>
+
+<body>
+    <section>
+    </section>
+    <section class="cartSection">
+        <div class="cartContainer">
+            <div class="added-product">
+                <div class="items">
+                    <div class="image">
+                        <img src="paneerTika.png" alt="">
+                    </div>
+                    <div class="specification">
+                        <div>Rating</div>
+                        <div class="name">Lorem, ipsum dolor.</div>
+                        <div class="resturentName">Lorem ipsum dolor sit amet.</div>
+                        <div class="modificationBtns">
+                            <div class="counter"><button>-</button><input type="text" name="" value="1" id=""><button>+</button></div>
+                            <div class="removeFromCart"><button>Delete</button></div>
+                            <div class="addToCart"><button>Add To Cart</button></div>
+                        </div>
+                    </div>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src="paneerTika.png" alt="">
+                    </div>
+                    <div class="specification">
+                        <div>Rating</div>
+                        <div class="name">Lorem, ipsum dolor.</div>
+                        <div class="resturentName">Lorem ipsum dolor sit amet.</div>
+                        <div class="modificationBtns">
+                            <div class="counter"><button>-</button><span>1</span><button>+</button></div>
+                            <div class="removeFromCart"><button>Delete</button></div>
+                            <div class="addToCart"><button>Add To Cart</button></div>
+                        </div>
+                    </div>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src="paneerTika.png" alt="">
+                    </div>
+                    <div class="specification">
+                        <div>Rating</div>
+                        <div class="name">Lorem, ipsum dolor.</div>
+                        <div class="resturentName">Lorem ipsum dolor sit amet.</div>
+                        <div class="modificationBtns">
+                            <div class="counter"><button>-</button><span>1</span><button>+</button></div>
+                            <div class="removeFromCart"><button>Delete</button></div>
+                            <div class="addToCart"><button>Add To Cart</button></div>
+                        </div>
+                    </div>
+                    <div class="price">$20.00</div>
+                </div>
+
+            </div>
+            <div class="pricingCalculation">
+                <div class="priceDetails">Price Details</div>
+                <div class="totalItems">
+                    <div class="totalPrices">
+                        <p>Price(4 Items)</p>
+                        <p>$ 1400.00</p>
+                    </div>
+                    <div class="totalDiscount">
+                        <p>Discount</p>
+                        <p>$ -500.00</p>
+                    </div>
+                    <div class="deliveryCharge">
+                        <p>Delivery Charge</p>
+                        <p class="free">Free</p>
+                    </div>
+                    <div class="packingFee">
+                        <p>Packing Fee</p>
+                        <p class="free">Free</p>
+                    </div>
+                    <div class="finalAmount">
+                        <h3>Total Amount:</h3>
+                        <h3>$1000.00</h3>
+                    </div>
+                    <div class="totalSave free">You will save $500.00 on this order</div>
+                    <button class="checkOutBtn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
