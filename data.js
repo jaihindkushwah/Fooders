@@ -1,3 +1,38 @@
+const featuredMenu=[
+    {
+        "name":"Ravioli",
+        "img":"https://m.recipes.timesofindia.com/thumb/60891949.cms?width=390&height=380",
+        "price":'8'
+    },
+    {
+        "name":"Black Pasta",
+        "img":"img/menuImg2.jpg",
+        "price":"15"
+    },
+    {
+        "name":"Gelato",
+        "img":"img/menuImg3.jpg",
+        "price":"12"
+    },
+    {
+        "name":"Noodles",
+        "img":"https://cdn3.mydukaan.io/app/image/500x500/?url=https://mydukaan-prod-new.s3.amazonaws.com/99865/8f28a60c-e01b-45f2-9b9c-094ab19230f6.png",
+        "price":"5"
+    },
+    {
+        "name":"Chole Bhature",
+        "img":"https://img.freepik.com/premium-photo/chole-bhature-spicy-chick-peas-curry-also-known-as-chole-channa-masala-is-traditional-north-indian-main-course-recipe-usually-served-with-fried-puri-bhature-selective-focus_726363-295.jpg?w=400",
+        "price":"8"
+    },
+    {
+        "name":"Egg Curry",
+        "img":"https://static.toiimg.com/thumb/msid-88283972/88283972.jpg?width=500&resizemode=4",
+        "price":"10"
+    }
+    
+];
+
+
 const delivery=[
     {
         "img":"https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png",
