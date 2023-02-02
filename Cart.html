@@ -6,16 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="Cart.css">
     <link rel="shortcut icon"
         href="https://img.freepik.com/premium-vector/vegetable-salad-plate-with-knife-fork_357573-64.jpg"
         type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="Cart.js" defer></script>
     
 </head>
 
 <body>
+    <!-- login section -->
+    <section class="loginSection">
+        <div class="loginMain">
+            <div class="loginContainer">
+                <div class="loginContent">
+                    <h3>Welcome to Fooder</h3>
+                    <hr>
+                    <p>Sign in to continue.</p>
+                </div>
+                <div class="formContainer">
+                    <div class="social-account">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
     
+                    </div>
+                    <div class="divide">
+                        <hr>&nbsp; or &nbsp;<hr>
+                    </div>
+                    <div>
+                        <form action="">
+                            <input type="email" placeholder="Email address" required><br>
+                            <input type="password" placeholder="Password" required><br>
+                            <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
+                            <button type="submit">Sign in</button>
+                            <a href="">Forget password?</a>
+                        </form>
+                    </div>
+                    <div>
+                        Not a member yet?  <a href="#">  &nbsp; Sign Up.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mainSection">
+        <!-- Navbar -->
+        <div class="scroll-up">
+            <i class="fa-solid fa-circle-chevron-up"></i>
+            Top
+        </div>
+        <nav>
+            <div class="bars">
+                <div class="bar1">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </div>
+                <div class="bar2">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contacts</a>
+
+            </div>
+            <div class="navbar">
+                <div class="site-name">
+                    <a href="">
+                        <h2>Fooder<sup>FREE</sup></h2>
+                        <h5>INDIAN FOOD</h5>
+                    </a>
+                </div>
+
+                <div class="nav-items">
+                    <li class="home"><a href="">HOME</a></li>
+                    <li class="about"><a href="">ABOUT</a></li>
+                    <li class="pricing"><a href="">PRICING</a></li>
+                    <li class="contact"><a href="">CONTACTS</a></li>
+                </div>
+                <!-- book directly -->
+                <div class="book" id="book">
+                    <!-- <a href="Cart.html" class="cart" id="cart"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <button class="login" id="login"><i class="fa-solid fa-user"></i> Login</button>
+                    <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
+                    
+                </div>
+                <div class="user">
+                    <!-- <a href="Cart.html" class="cart" id="cart1"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <div class="login "><i class="fa-solid fa-user-circle"></i></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+        <!-- Main content -->
     <section class="cartSection">
         <div class="cartContainer">
             <div class="added-product">
@@ -27,6 +117,32 @@
                 <div class="totalItems">
                     <!-- Cart total Checkout amount section -->
                 </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- footer content -->
+    <section>
+        <div class="footer">
+            <div class="site-name">
+                <a href="/">
+                    <h2>Fooder<sup>FREE</sup></h2>
+                    <h5>INDIAN FOOD</h5>
+                </a>
+            </div>
+            <div class="footer-links">
+                <li><a href="">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </div>
+            <div class="social-links">
+                <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
             </div>
         </div>
     </section>
