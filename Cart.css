@@ -244,6 +244,16 @@ button {
         border-bottom: 0;
     }
     .added-product{
-        padding: 0;
+        padding: 10px;
+    }
+    .added-product h1{
+        /* font-size: 1.2rem; */
+        margin-bottom: 10px;
+    }
+    .items .image div{
+        width: 340px;
+        height: 240px;
+        /* padding: 10px; */
+        background:center;
     }
 }
