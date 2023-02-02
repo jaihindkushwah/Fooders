@@ -398,7 +398,7 @@ nav {
     letter-spacing: 2px;
 }
 
-.mainSection a {
+.mainSection a,.footer a {
     text-decoration: none;
     color: var(--white);
     transition: 0.3s;
