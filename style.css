@@ -174,7 +174,7 @@ a {
     font-size: .9rem;
     border-radius: 3px;
 }
-a#cart{
+a.cart{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -187,12 +187,12 @@ a#cart{
     border-radius: 3px;
     margin-right: 10px;
 }
-a#cart>p{
+a.cart>p{
     font-weight: 600;
     /* color: rgb(73, 72, 71); */
 }
 
-#book button:hover,a#cart:hover , a#cart>p:hover {
+#book button:hover,a.cart:hover , a.cart>p:hover {
     border: 1px solid black;
     background-color: var(--header);
     color: var(--white)
@@ -1068,6 +1068,9 @@ button {
 
     .nav-items,
     .book {
+        display: none;
+    }
+    .book>.cart{
         display: none;
     }
     .user{

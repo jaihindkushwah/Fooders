@@ -60,11 +60,8 @@ function collectionElementCreate(src,content){
 
 // Selector
 const Buttons=document.querySelectorAll('.menuImag');
-const scrollBtn=document.querySelector('.scroll-up');
-const bar1=document.querySelector('.bar1');
-const bar2=document.querySelector('.bar2');
-const sideNav=document.querySelector('.sidenav');
 // Featured Button Show and hide
+
 Buttons.forEach((el)=>{
     el.parentElement.addEventListener('mouseover',(e)=>{
         if(e.target){
@@ -80,40 +77,6 @@ Buttons.forEach((el)=>{
         }
     });
 })
-
-// Scroll up 
-window.onscroll=function(){scrollFunction()};
-function scrollFunction(){
-    if(document.body.scrollTop>20 || document.documentElement.scrollTop > 20){
-        scrollBtn.style.display="block";
-    }
-    else{
-        scrollBtn.style.display="none";
-    }
-}
-scrollBtn.addEventListener('click',toScrollTop);
-function toScrollTop(){
-    document.body.scrollTop= 0;
-    document.documentElement.scrollTop= 0;
-}
-
-// Side bar feature
-bar1.addEventListener('click',openNav);
-bar2.addEventListener('click',closeNav);
-function openNav(){
-    sideNav.style.width='150px';
-    document.querySelector('.bar1').style.display='none';
-    document.querySelector('.bar2').style.display='block';
-    // document.querySelector(".main").style.marginLeft= "150px";
-
-}
-function closeNav(){
-    sideNav.style.width='0px';
-    document.querySelector('.bar2').style.display='none';
-    document.querySelector('.bar1').style.display='block';
-    // document.querySelector(".main").style.marginLeft= "0px";
-}
-
 
 // Scroll left and scroll-right
 // Collections change using button
@@ -222,29 +185,6 @@ function scrollLeftRight(){
     });
 }
 
-
-// login page
-const loginSection=document.querySelector('.loginSection');
-const loginBtn=document.querySelectorAll('.login');
-const mainSection=document.querySelector('.mainSection');
-const closeBtn=document.querySelector('.close');
-
-// 
-loginBtn.forEach(el=>{
-    el.addEventListener('click',(e)=>{
-        if(e.target){
-            loginSection.style.display="inline";
-            
-        }
-    })
-})
-closeBtn.addEventListener('click',()=>{
-    loginSection.style.display="none";
-})
-loginSection.addEventListener("dblclick",()=>{
-    loginSection.style.display="none";
-})
-
 // Add To Cart Sections
 // featuredDiv
 const addedInCart=[];
@@ -257,6 +197,7 @@ window.onload=()=>{
     }
         
     document.querySelector('#cart>p').innerHTML=Number(addedInCart.length);
+    document.querySelector('#cart1>p').innerHTML=Number(addedInCart.length);
 };
 // onclick item is storing in cart
 featuredDiv.addEventListener('click',(event)=>{
@@ -283,6 +224,7 @@ function addToCart(name,img,price,shopName,rating,deliveryType,quantity){
     if(!curItemIsPresent){
         addedInCart.push(curItem);
         document.querySelector('#cart>p').innerHTML=Number(addedInCart.length);
+        document.querySelector('#cart1>p').innerHTML=Number(addedInCart.length);
     }
     
 }
