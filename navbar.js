@@ -50,9 +50,19 @@ loginBtn.forEach(el=>{
         }
     })
 })
+
 closeBtn.addEventListener('click',()=>{
     loginSection.style.display="none";
 })
 loginSection.addEventListener("dblclick",()=>{
     loginSection.style.display="none";
 })
+
+const socialButtons=document.querySelectorAll('.social-account>button');
+
+socialButtons.forEach(el=>{
+    el.addEventListener('click',()=>{
+        alert('this is not available yet.')
+    })
+})
+

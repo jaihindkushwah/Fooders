@@ -8,7 +8,7 @@
     <title>login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="login.css">
-</head>
+   </head>
 
 <body>
     <div class="loginMain">
@@ -31,10 +31,10 @@
                 </div>
                 <div>
                     <form action="">
-                        <input type="email" placeholder="Email address" required><br>
-                        <input type="password" placeholder="Password" required><br>
-                        <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
-                        <button type="submit">Sign in</button>
+                        <input type="email" id="email" placeholder="Email address" required><br>
+                        <input type="password" id="password" placeholder="Password" required><br>
+                        <!-- <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div> -->
+                        <button type="submit" id="login">Sign in</button>
                         <a href="">Forget password?</a>
                     </form>
                 </div>
@@ -46,23 +46,96 @@
     </div>
 </body>
 <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
     const firebaseConfig = {
-      apiKey: "AIzaSyBRklWZ7GjPQomvOIRdML9vDO8m8DF3Rcw",
-      authDomain: "user-auth-19a5f.firebaseapp.com",
-      projectId: "user-auth-19a5f",
-      storageBucket: "user-auth-19a5f.appspot.com",
-      messagingSenderId: "375547850260",
-      appId: "1:375547850260:web:1303f03cd14d3a9a550101"
+      apiKey: "AIzaSyDKsHJ_mftWWXhrAWhemMRj8_uLUN0v22Q",
+      authDomain: "fooder-free.firebaseapp.com",
+      projectId: "fooder-free",
+      storageBucket: "fooder-free.appspot.com",
+      messagingSenderId: "279221637454",
+      appId: "1:279221637454:web:f5dd2f669ba7a2d8ef0e1f"
     };
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
+// --------------------------authentication----------------------------------------------
+
+   import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-auth.js'
+
+   const auth=getAuth();
+//----------------database------------------------
+
+  import { getDatabase , ref , set , child , update , remove } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-database.js'
+    const email=document.querySelector('#email');
+    const password=document.querySelector('#password');
+    const login=document.querySelector('#login');
+
+    // ----------Sign Up -------------------
+
+
+
+    // login.addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    //     console.log(email.value);
+    //     console.log(password.value);
+    //     createUserWithEmailAndPassword(auth, email.value, password.value)
+    //     .then((userCredential) => {
+    //         // Signed in 
+    //         const user = userCredential.user;
+    //         console.log(user);
+    //         // ...
+    //     })
+    //     .catch((error) => {
+    //         console.log(error.code);
+    //         console.log(error.message);
+    //         // ..
+    //     });
+    // });
+
+
+    // -------------------Login or sign in---------------------
+
+
+    // login.addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    //     console.log(email.value);
+    //     console.log(password.value);
+    //     signInWithEmailAndPassword(auth, email.value, password.value)
+    //     .then((userCredential) => {
+    //         // Signed in 
+    //         const user = userCredential.user;
+    //         console.log(user);
+    //         // ...
+    //     })
+    //     .catch((error) => {
+    //         console.log(error.code);
+    //         console.log(error.message);
+    //         // ..
+    //     });
+    // });
+
+
+
+
   </script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

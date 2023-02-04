@@ -1,15 +1,15 @@
 // Render AddedInCart Element
 let list=JSON.parse(localStorage.getItem('addedInCart'));
 
-const addedProductInCart=document.querySelector('.added-product');
+const addedProductInCart=document.querySelector('.added-product>div');
 
-window.onload=addInCartCreatedElement();
-function addInCartCreatedElement (){
+function renderCart(){
     for(let i=0;i<list.length;i++){
         createCartElement(list[i],i);
     }
     forEmptyCart();
 }
+renderCart();
 
 function createCartElement(elData,i){
     let div=document.createElement('div');
@@ -34,78 +34,83 @@ function createCartElement(elData,i){
 
 
 
-
-
-
-
-
-
-
-
 // Counter App;
-const counter=document.querySelectorAll('.counter');
 
-counter.forEach((el)=>{
-    el.addEventListener('click',(event)=>{
-        if(event.target.id=='subtractBtn'){
-            let inputValue=event.target.nextElementSibling;
-            if(inputValue.value<=1){
-                event.target.nextElementSibling.value=1;
-               
+
+function quantityIncreaseDecrease(){
+    const counter=document.querySelectorAll('.counter');
+    counter.forEach((el)=>{
+        el.addEventListener('click',(event)=>{
+            if(event.target.id=='subtractBtn'){
+                let inputValue=event.target.nextElementSibling;
+                if(inputValue.value<=1){
+                    event.target.nextElementSibling.value=1;
+                   
+                }
+                else{
+                    event.target.nextElementSibling.value=`${Number(inputValue.value)-1}`;
+                }
+                list[Number(inputValue.className)]["quantity"]=inputValue.value;
             }
-            else{
-                event.target.nextElementSibling.value=`${Number(inputValue.value)-1}`;
+            if(event.target.id=='addBtn'){
+                let inputValue=event.target.previousElementSibling;
+                if(inputValue.value>=10){
+                    event.target.previousElementSibling.value=10;
+                    
+                    // alert("Currently, You can book upto 10 from a restaurant. You can book some other else. ");
+                }
+                else{
+                    event.target.previousElementSibling.value=`${Number(inputValue.value)+1}`;
+                }
+                list[Number(inputValue.className)]["quantity"]=inputValue.value;
+                // console.log(list[Number(inputValue.className)]["quantity"]);
             }
-            list[Number(inputValue.className)]["quantity"]=inputValue.value;
-        }
-        if(event.target.id=='addBtn'){
-            let inputValue=event.target.previousElementSibling;
-            if(inputValue.value>=10){
-                event.target.previousElementSibling.value=10;
-                
-                // alert("Currently, You can book upto 10 from a restaurant. You can book some other else. ");
-            }
-            else{
-                event.target.previousElementSibling.value=`${Number(inputValue.value)+1}`;
-            }
-            list[Number(inputValue.className)]["quantity"]=inputValue.value;
-            // console.log(list[Number(inputValue.className)]["quantity"]);
-        }
-        localStorage.setItem('addedInCart',JSON.stringify(list));
-        totalPriceCalculate();
+            localStorage.setItem('addedInCart',JSON.stringify(list));
+            totalPriceCalculate();
+        })
     })
-})
-
+}
+quantityIncreaseDecrease();
 // Delete Item from Cart
 
-const deleteButtons=document.querySelectorAll('.removeFromCart>button');
 
-deleteButtons.forEach(el=>{
-    el.addEventListener('click',(event)=>{
-        let elementNo=event.target.className;
-        list.splice(Number(elementNo),1);
-        // window.location.reload();
-        // addInCartCreatedElement();
-        window.location.reload();
-    });
 
-})
-window.onload=forEmptyCart();
+function deleteCartItem(){
+    const deleteButtons=document.querySelectorAll('.removeFromCart>button');
+    deleteButtons.forEach(el=>{
+        el.addEventListener('click',(event)=>{
+            let elementNo=event.target.className;
+            list.splice(Number(elementNo),1);
+            localStorage.setItem('addedInCart',JSON.stringify(list));
+            // window.location.reload();
+            addedProductInCart.innerHTML="";
+            renderCart();
+            quantityIncreaseDecrease();
+            deleteCartItem();
+            totalPriceCalculate();
+            checkOut();
+            // window.location.reload();
+        });
+    
+    })
+}
+deleteCartItem();
+
+
 function forEmptyCart(){
     let cartHeading=document.querySelector('.added-product>h1');
-    if(cartHeading.nextElementSibling==null){
+    if(cartHeading.nextElementSibling.innerHTML==""){
         cartHeading.innerHTML='Shopping Cart is Empty.<p>For more shopping please go to <a href="./index.html">Home page</a>.</p>'
     }
     else{
         cartHeading.innerHTML="Shopping Cart";
     }
 }
-
+forEmptyCart();
 
 
 // Calculate total price of all added items in the cart.
 const totalItems=document.querySelector('.totalItems');
-window.onload=totalPriceCalculate();
 function totalPriceCalculate(){
     let noOfItems=list.length;
     let totalPrices=0;list.map(el=>{totalPrices+=Number(el["price"])*Number(el["quantity"])});
@@ -113,9 +118,11 @@ function totalPriceCalculate(){
     let deliveryFee="Free";
     let packingFee="Free";
     let totalAmount=Number(totalPrices)-Number(discount);
-    createElementOfTotalItems(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount);
+    checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount);
 }
-function createElementOfTotalItems(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount){
+totalPriceCalculate();
+
+function checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount){
     let el=`<div class="totalPrices">
     <p>Price(${noOfItems} Items)</p>
     <p>$ ${totalPrices}</p>
@@ -134,14 +141,29 @@ function createElementOfTotalItems(noOfItems,totalPrices,discount,deliveryFee,pa
     </div>
     <div class="finalAmount">
         <h3>Total Amount:</h3>
-        <h3>$ ${totalAmount}</h3>
+        <h3 id="finalAmount">$ <span>${totalAmount}</span></h3>
     </div>
     <div class="totalSave free">You will save $ ${discount} on this order</div>
     <button class="checkOutBtn">Proceed to Checkout</button>`
     totalItems.innerHTML=el;
 }
 
-
+// Payment Integration;
+const checkOutBtn=document.querySelector('.checkOutBtn');
+const finalAmount=document.querySelector('#finalAmount>span');
+function checkOut(){
+    checkOutBtn.addEventListener('click',()=>{
+        if(finalAmount.innerHTML=="0"){
+            alert("Please add some products in the cart.");
+            return;
+        }
+        else{
+            
+        }
+        
+    });
+}
+checkOut();
 
 window.onbeforeunload=()=>{localStorage.setItem('addedInCart',JSON.stringify(list));}
 
