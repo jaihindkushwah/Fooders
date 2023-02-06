@@ -71,9 +71,9 @@ function quantityIncreaseDecrease(){
     })
 }
 quantityIncreaseDecrease();
+
+
 // Delete Item from Cart
-
-
 
 function deleteCartItem(){
     const deleteButtons=document.querySelectorAll('.removeFromCart>button');
@@ -144,7 +144,7 @@ function checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,t
         <h3 id="finalAmount">$ <span>${totalAmount}</span></h3>
     </div>
     <div class="totalSave free">You will save $ ${discount} on this order</div>
-    <button class="checkOutBtn">Proceed to Checkout</button>`
+    <button class="checkOutBtn">Proceed to Checkout</button>`;
     totalItems.innerHTML=el;
 }
 

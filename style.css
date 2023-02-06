@@ -539,12 +539,6 @@ hr {
     scroll-behavior: smooth;
 }
 
-/* .deliveryImg::-webkit-scrollbar,
-.diningImg::-webkit-scrollbar,
-.nightlifeImg::-webkit-scrollbar
-{
-    width: 0;
-} */
 .deliveryImg div img {
     margin: 0 2px 0 0;
     padding: 10px 20px;
@@ -622,12 +616,6 @@ hr {
     cursor: pointer;
 }
 
-/* .scroll-left{
-    float: right;
-}
-.scroll-right{
-    float: left;
-} */
 .deliveryContainer>div>h3 {
     font-size: 2rem;
     padding: 10px 0px 25px 0px;
@@ -949,16 +937,6 @@ button {
     height: 2.5px;
     background-color: #333;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
