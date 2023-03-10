@@ -116,7 +116,7 @@
             /* grid-row-gap: 10px; */
         }
 
-        .productContainer>* {
+        .productContainer>div {
             margin: 10px;
         }
 
@@ -143,9 +143,9 @@
             border: 1px solid black;
             font-size: .9rem;
         }
-        /* .footer{
-            min-width: 100;
-        } */
+        .footer{
+            grid-column: 1/-1;
+        }
 
         @media screen and (max-width:680px) {
             .productContainer {
@@ -155,9 +155,7 @@
                 /* grid-row-gap: 10px; */
             }
 
-            .footer {
-                /* min-width: 120dvw; */
-            }
+            
 
             .searchField {
                 width: 80%;
@@ -165,18 +163,6 @@
 
             .searchField input {
                 height: 50px;
-            }
-        }
-        @media screen and (max-width:420px) {
-            .productContainer {
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                /* grid-row-gap: 10px; */
-            }
-
-            .footer {
-                /* min-width: 195vw; */
             }
         }
     </style>
@@ -239,6 +225,7 @@
             <i class="fa-solid fa-circle-chevron-up"></i>
             Top
         </div>
+
         <nav>
             <div class="bars">
                 <div class="bar1">
@@ -282,6 +269,7 @@
                 </div>
             </div>
         </nav>
+        
     </section>
     <!-- <section class="header"></section> -->
     <section class="productSection">
@@ -612,33 +600,35 @@
                             </div>
                         </div>
                     </div>
+                    <section class="footer">
+                        <div class="site-name">
+                            <a href="./index.html">
+                                <h2>Fooder<sup>FREE</sup></h2>
+                                <h5>INDIAN FOOD</h5>
+                            </a>
+                        </div>
+                        <div class="footer-links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </div>
+                        <div class="social-links">
+                            <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                            <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                            <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                            <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                            <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+                        </div>
+                    </section>
 
                 </div>
             </div>
+
     </section>
     <!-- footer content -->
-    <div class="footer">
-        <div class="site-name">
-            <a href="./index.html">
-                <h2>Fooder<sup>FREE</sup></h2>
-                <h5>INDIAN FOOD</h5>
-            </a>
-        </div>
-        <div class="footer-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Terms of Use</a></li>
-        </div>
-        <div class="social-links">
-            <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-            <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
-            <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
-            <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-        </div>
-    </div>
+    
 </body>
 
 </html>
