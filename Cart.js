@@ -89,12 +89,24 @@ function deleteCartItem(){
             deleteCartItem();
             totalPriceCalculate();
             checkOut();
+
             // window.location.reload();
         });
     
     })
 }
 deleteCartItem();
+
+function changeValueAccordingInputChange(){
+    const noOfItem=document.querySelectorAll('counter>input');
+    noOfItem.forEach((el)=>{
+        el.addEventListener('change',(e)=>{
+            totalPriceCalculate();
+        })
+    })
+}
+
+
 
 
 function forEmptyCart(){

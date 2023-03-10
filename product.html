@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon"
+        href="https://img.freepik.com/premium-vector/vegetable-salad-plate-with-knife-fork_357573-64.jpg"
+        type="image/x-icon">
+    <script src="../navbar.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .productSection{
+            width: 100%;
+            height: 100%;
+            /* height: 100vh; */
+        }
+        .productMain{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+       .productSection button{
+            cursor: pointer;
+            width: 80px;
+            font-size: 1rem;
+            font-weight: 500;
+            padding:10px 15px;
+            border: none;
+            border-radius: 3px;
+            background-color: white;
+        }
+       .productSection button:hover{
+            /* background-color: rgb(147, 145, 145); */
+            background-color: black;
+            color: white;
+        }
+        .productMain .main{
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            background-color: #EAEDED;
+            /* background: linear-gradient(to left,rgb(46, 46, 138),rgb(221, 94, 94)); */
+        }
+        .productMain .main > *{
+            margin-top: 20px;
+        }
+        .searchField{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+        .searchField input{
+            width: 100%;
+            border-radius: 20px;
+            text-align: center;
+            letter-spacing: .8px;
+            /* font-weight:100; */
+            font-size: 1rem;
+            word-spacing: 1px;
+            margin-right: 5px;  
+            height: 35px;
+
+        }
+       .productSection .fa.fa-search{
+            padding: 5px;
+        }
+       .productContainer .fa.fa-search:hover{
+            cursor: pointer;
+            background-color: rgb(68, 66, 66);
+            color: white;
+            padding: 5px;
+
+        }
+        .productContainer{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* grid-row-gap: 10px; */
+        }
+        .productContainer>*{
+            margin: 10px;
+        }
+        .singleProduct{
+            background-color: white;
+            padding: 20px;
+        }
+        .singleProduct:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+       .productSection img{
+            max-width: 300px;
+            padding-bottom: 20px;
+        }
+        @media screen and (max-width:640px) {
+                .productContainer{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                /* grid-row-gap: 10px; */
+            }
+            .footer{
+                min-width: 200%;
+            }
+            .searchField{
+                width: 80%;
+            }
+            .searchField input{
+                height: 50px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- login section -->
+    <section class="loginSection">
+        <div class="loginMain">
+            <div class="loginContainer">
+                <div class="loginContent">
+                    <h3>Welcome to Fooder</h3>
+                    <hr>
+                    <p>Sign in to continue.</p>
+                </div>
+                <div class="formContainer">
+                    <div class="social-account">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
+    
+                    </div>
+                    <div class="divide">
+                        <hr>&nbsp; or &nbsp;<hr>
+                    </div>
+                    <div>
+                        <form action="">
+                            <input type="email" placeholder="Email address" required><br>
+                            <input type="password" placeholder="Password" required><br>
+                            <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
+                            <button type="submit">Sign in</button>
+                            <a href="">Forget password?</a>
+                        </form>
+                    </div>
+                    <div>
+                        Not a member yet?  <a href="#">  &nbsp; Sign Up.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mainSection">
+        <!-- Navbar -->
+        <div class="scroll-up">
+            <i class="fa-solid fa-circle-chevron-up"></i>
+            Top
+        </div>
+        <nav>
+            <div class="bars">
+                <div class="bar1">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </div>
+                <div class="bar2">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="./index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contacts</a>
+
+            </div>
+            <div class="navbar">
+                <div class="site-name">
+                    <a href="./index.html">
+                        <h2>Fooder<sup>FREE</sup></h2>
+                        <h5>INDIAN FOOD</h5>
+                    </a>
+                </div>
+
+                <div class="nav-items">
+                    <li class="home"><a href="./index.html">HOME</a></li>
+                    <li class="about"><a href="">ABOUT</a></li>
+                    <li class="pricing"><a href="">PRICING</a></li>
+                    <li class="contact"><a href="">CONTACTS</a></li>
+                </div>
+                <!-- book directly -->
+                <div class="book" id="book">
+                    <!-- <a href="Cart.html" class="cart" id="cart"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <button class="login" id="login"><i class="fa-solid fa-user"></i> Login</button>
+                    <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
+                    
+                </div>
+                <div class="user">
+                    <!-- <a href="Cart.html" class="cart" id="cart1"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <div class="login "><i class="fa-solid fa-user-circle"></i></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- <section class="header"></section> -->
+    <section class="productSection">
+        <div class="productMain">
+            <div class="main">
+                <div class="searchField">
+                    <input type="text" name="" id="" placeholder="Search your best meal...">
+                    <span class="fa fa-solid fa-search"></span>
+                </div>
+                <div class="filterBtn">
+                    <button class="All">All</button>
+                    <button class="Cheeze">Cheeze</button>
+                    <button class="biryani">Biryani</button>
+                    <button class="Paneer">Paneer</button>
+                    <button class="noodles">Noodle</button>
+                </div>
+                <div class="productContainer">
+                    <div class="singleProduct">
+                        <img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+                    <div class="singleProduct">
+                        <img src="img1(640).jpg" alt="">
+                        <div class="name">Paneer</div>
+                        <div class="rating">*****</div>
+                        <div class="deliveryType">You are eligible for free delivery.</div>
+                        <div class="price">Rs. 400</div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer content -->
+    <section >
+        <div class="footer">
+            <div class="site-name">
+                <a href="./index.html">
+                    <h2>Fooder<sup>FREE</sup></h2>
+                    <h5>INDIAN FOOD</h5>
+                </a>
+            </div>
+            <div class="footer-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </div>
+            <div class="social-links">
+                <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -648,7 +648,7 @@ hr {
     color: rgb(249, 90, 32);
 }
 .footer {
-    max-width: 100vw;
+    min-width: 100vw;
     height: 45h;
     background-color: #333;
     display: flex;
