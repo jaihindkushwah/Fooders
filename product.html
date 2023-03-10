@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,10 @@
         href="https://img.freepik.com/premium-vector/vegetable-salad-plate-with-knife-fork_357573-64.jpg"
         type="image/x-icon">
     <script src="./navbar.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+
 
     <style>
-        *{
+        /* *{
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
@@ -23,33 +24,40 @@
         body{
             width: 100%;
             height: 100%;
-        }
-        .productSection{
+        } */
+        .productSection {
             width: 100%;
             height: 100%;
             /* height: 100vh; */
         }
-        .productMain{
+
+        .productMain {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr;
         }
-       .productSection button{
-            cursor: pointer;
+
+        .productSection .filterBtn button {
             width: 80px;
+        }
+
+        .productSection button {
+            cursor: pointer;
             font-size: 1rem;
             font-weight: 500;
-            padding:10px 15px;
+            padding: 10px 15px;
             border: none;
             border-radius: 3px;
             background-color: white;
         }
-       .productSection button:hover{
+
+        .productSection button:hover {
             /* background-color: rgb(147, 145, 145); */
             background-color: black;
             color: white;
         }
-        .productMain .main{
+
+        .productMain .main {
             grid-row: 1/-1;
             grid-column: 1/-1;
             width: 100%;
@@ -61,10 +69,12 @@
             background-color: #EAEDED;
             /* background: linear-gradient(to left,rgb(46, 46, 138),rgb(221, 94, 94)); */
         }
-        .productMain .main > *{
+
+        .productMain .main>* {
             margin-top: 20px;
         }
-        .searchField{
+
+        .searchField {
             width: 30%;
             display: flex;
             justify-content: center;
@@ -73,7 +83,8 @@
             padding: 10px 20px;
             border-radius: 30px;
         }
-        .searchField input{
+
+        .searchField input {
             width: 100%;
             border-radius: 20px;
             text-align: center;
@@ -81,61 +92,97 @@
             /* font-weight:100; */
             font-size: 1rem;
             word-spacing: 1px;
-            margin-right: 5px;  
+            margin-right: 5px;
             height: 35px;
 
         }
-       .productSection .fa.fa-search{
+
+        .productSection .fa.fa-search {
             padding: 5px;
         }
-       .productContainer .fa.fa-search:hover{
+
+        .productSection .fa.fa-search:hover {
             cursor: pointer;
             background-color: rgb(68, 66, 66);
             color: white;
             padding: 5px;
 
         }
-        .productContainer{
+
+        .productContainer {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             /* grid-row-gap: 10px; */
         }
-        .productContainer>*{
+
+        .productContainer>* {
             margin: 10px;
         }
-        .singleProduct{
+
+        .singleProduct {
             background-color: white;
             padding: 20px;
         }
-        .singleProduct:hover{
+
+        .singleProduct:hover {
             cursor: pointer;
             transform: scale(1.02);
         }
-       .productSection img{
+
+        /* .singleProduct:hover img {
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.455);
+        } */
+        .productSection img {
             max-width: 300px;
             padding-bottom: 20px;
         }
-        @media screen and (max-width:640px) {
-                .productContainer{
+
+        .singleProduct button {
+            margin-top: 5px;
+            border: 1px solid black;
+            font-size: .9rem;
+        }
+        /* .footer{
+            min-width: 100;
+        } */
+
+        @media screen and (max-width:680px) {
+            .productContainer {
                 width: 100%;
                 display: grid;
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
                 /* grid-row-gap: 10px; */
             }
-            .footer{
-                min-width: 200%;
+
+            .footer {
+                /* min-width: 120dvw; */
             }
-            .searchField{
+
+            .searchField {
                 width: 80%;
             }
-            .searchField input{
+
+            .searchField input {
                 height: 50px;
             }
         }
+        @media screen and (max-width:420px) {
+            .productContainer {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                /* grid-row-gap: 10px; */
+            }
+
+            .footer {
+                /* min-width: 195vw; */
+            }
+        }
     </style>
-    
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <!-- login section -->
     <section class="loginSection">
@@ -149,13 +196,26 @@
                 <div class="formContainer">
                     <div class="social-account">
                         <div class="close"><i class="fa-solid fa-xmark"></i></div>
-                        <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
-                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
-                        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
-    
+                        <button><img
+                                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png"
+                                alt="">
+                            <p>Continue with Facebook</p>
+                        </button>
+                        <button><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png"
+                                alt="">
+                            <p>Continue with Google</p>
+                        </button>
+                        <button><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png"
+                                alt="">
+                            <p>Continue with Apple</p>
+                        </button>
+
                     </div>
                     <div class="divide">
-                        <hr>&nbsp; or &nbsp;<hr>
+                        <hr>&nbsp; or &nbsp;
+                        <hr>
                     </div>
                     <div>
                         <form action="">
@@ -167,7 +227,7 @@
                         </form>
                     </div>
                     <div>
-                        Not a member yet?  <a href="#">  &nbsp; Sign Up.</a>
+                        Not a member yet? <a href="#"> &nbsp; Sign Up.</a>
                     </div>
                 </div>
             </div>
@@ -211,13 +271,13 @@
                 </div>
                 <!-- book directly -->
                 <div class="book" id="book">
-                    <!-- <a href="Cart.html" class="cart" id="cart"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <a href="Cart.html" class="cart" id="cart"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a>
                     <button class="login" id="login"><i class="fa-solid fa-user"></i> Login</button>
                     <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
-                    
+
                 </div>
                 <div class="user">
-                    <!-- <a href="Cart.html" class="cart" id="cart1"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a> -->
+                    <a href="Cart.html" class="cart" id="cart1"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a>
                     <div class="login "><i class="fa-solid fa-user-circle"></i></div>
                 </div>
             </div>
@@ -240,130 +300,345 @@
                 </div>
                 <div class="productContainer">
                     <div class="singleProduct">
-                        <img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
-                    </div>
-                    <div class="singleProduct"><img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
+
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="singleProduct">
-                        <img src="img1(640).jpg" alt="">
-                        <div class="name">Paneer</div>
-                        <div class="rating">*****</div>
-                        <div class="deliveryType">You are eligible for free delivery.</div>
-                        <div class="price">Rs. 400</div>
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
                     </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleProduct">
+                        <div>
+                            <img src="img1(640).jpg" alt="">
+                        </div>
+                        <div style="padding:0px 10px;">
+                            <div class="name">Paneer</div>
+                            <div class="rating">*****</div>
+                            <div class="deliveryType">You are eligible for free delivery.</div>
+                            <div class="price">Rs.400</div>
+                            <div style="display: flex;justify-content: center;"><button value="400">Add To Card</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
     </section>
     <!-- footer content -->
-    <section >
-        <div class="footer">
-            <div class="site-name">
-                <a href="./index.html">
-                    <h2>Fooder<sup>FREE</sup></h2>
-                    <h5>INDIAN FOOD</h5>
-                </a>
-            </div>
-            <div class="footer-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Terms of Use</a></li>
-            </div>
-            <div class="social-links">
-                <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-                <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-                <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
-                <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
-                <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-            </div>
+    <div class="footer">
+        <div class="site-name">
+            <a href="./index.html">
+                <h2>Fooder<sup>FREE</sup></h2>
+                <h5>INDIAN FOOD</h5>
+            </a>
         </div>
-    </section>
+        <div class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </div>
+        <div class="social-links">
+            <div class="facebook"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="insta"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="linkedin"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+            <div class="twitter"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="youtube"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+        </div>
+    </div>
 </body>
+
 </html>
