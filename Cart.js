@@ -98,14 +98,37 @@ function deleteCartItem(){
 deleteCartItem();
 
 function changeValueAccordingInputChange(){
-    const noOfItem=document.querySelectorAll('counter>input');
+    let noOfItem=document.querySelectorAll('.counter input');
+    noOfItem.forEach((el)=>{
+        el.addEventListener('input',(e)=>{
+            
+            if(e.target.value<=0 && e.target.value!=''){
+                e.target.value=1;
+                alert("Please enter valid input");
+                return;
+
+            }
+            list[Number(e.target.className)]["quantity"]=e.target.value;
+            // console.log(list[Number(inputValue.className)]["quantity"]);
+            localStorage.setItem('addedInCart',JSON.stringify(list));
+            totalPriceCalculate();
+        })
+    })
     noOfItem.forEach((el)=>{
         el.addEventListener('change',(e)=>{
+            
+            if(e.target.value<=0 || e.target.value==''){
+                e.target.value=1;
+                alert("Please enter valid input");
+            }
+            list[Number(e.target.className)]["quantity"]=e.target.value;
+            // console.log(list[Number(inputValue.className)]["quantity"]);
+            localStorage.setItem('addedInCart',JSON.stringify(list));
             totalPriceCalculate();
         })
     })
 }
-
+changeValueAccordingInputChange();
 
 
 
@@ -177,8 +200,22 @@ function checkOut(){
 }
 checkOut();
 
-window.onbeforeunload=()=>{localStorage.setItem('addedInCart',JSON.stringify(list));}
 
+function paymentIntegration(){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+window.onbeforeunload=()=>{localStorage.setItem('addedInCart',JSON.stringify(list));}
 
 
 

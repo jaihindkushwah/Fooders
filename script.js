@@ -194,8 +194,7 @@ window.onload=()=>{
         storedItems.forEach(el=>{
             addedInCart.push(el);
         });
-    }
-        
+    } 
     document.querySelector('#cart>p').innerHTML=Number(addedInCart.length);
     document.querySelector('#cart1>p').innerHTML=Number(addedInCart.length);
 };
@@ -207,7 +206,6 @@ featuredDiv.addEventListener('click',(event)=>{
        let img=event.target.parentElement.style.backgroundImage;
        addToCart(name,img,price,"XYZ","5","free",'1');
     }
-    
 });
 // console.log(addedInCart);
 function addToCart(name,img,price,shopName,rating,deliveryType,quantity){
