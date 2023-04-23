@@ -214,7 +214,7 @@ function addToCart(name,img,price,shopName,rating,deliveryType,quantity){
     curItem["price"]=price; 
     curItem["img"]=img;
     curItem["shopName"]=shopName;
-    curItem["rating"]='*'.repeat(Number(rating));
+    curItem["rating"]='⭐'.repeat(Number(rating));
     curItem["deliveryType"]=deliveryType;
     curItem['quantity']=quantity;
     
