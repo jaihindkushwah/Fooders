@@ -12,6 +12,29 @@ window.onload=()=>{
 };
 
 
+// filter  Buttons Activate
+const filterBtns=document.querySelectorAll('.filterBtn button');
+function filterBtnActivate(){
+    filterBtns.forEach((button)=>{
+        button.addEventListener('click',(e)=>{
+            filterBtns.forEach((button)=>{
+                button.id='';
+            });
+            if(e.target){
+                e.target.id='filterActivate';
+            }
+        });
+    })
+}
+filterBtnActivate();
+
+
+
+
+
+
+
+
 
 function pushElementInContainer(){
     let productContainer=document.querySelector('.productContainer');

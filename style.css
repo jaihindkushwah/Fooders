@@ -1204,21 +1204,3 @@ button {
     }
 }
 
-.singleProduct .name{
-    font-weight: 600;
-    padding: 2px 5px;
-    color: rgb(80, 78, 78);
-}
-
-.singleProduct .rating{
-    font-weight: 600;
-    padding: 2px 5px;
-}
-.singleProduct .price{
-    font-weight: 600;
-    padding: 2px 5px;
-}
-.singleProduct .deliveryType{
-    font-size: .9rem;
-    padding: 3px 5px;
-}

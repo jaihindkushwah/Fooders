@@ -54,11 +54,7 @@
             background-color: white;
         }
 
-        .productSection button:hover {
-            /* background-color: rgb(147, 145, 145); */
-            background-color: black;
-            color: white;
-        }
+        
 
         .productMain .main {
             grid-row: 1/-1;
@@ -146,6 +142,40 @@
             border: 1px solid black;
             font-size: .9rem;
         }
+        #filterActivate {
+            /* background-color: rgb(147, 145, 145); */
+            background-color: black;
+            color: white;
+        }
+        .singleProduct button:hover{
+            background-color: black;
+            color: white;
+        }
+        
+        .singleProduct .name{
+            font-weight: 600;
+            padding: 2px 5px;
+            color: rgb(80, 78, 78);
+        }
+
+        .singleProduct .rating{
+            font-weight: 600;
+            padding: 2px 5px;
+        }
+        .singleProduct .price{
+            font-weight: 600;
+            padding: 2px 5px;
+        }
+        .singleProduct .deliveryType{
+            font-size: .9rem;
+            padding: 3px 5px;
+        }
+
+
+
+
+
+
         .footer{
             grid-column: 1/-1;
             margin-top: 50px;
@@ -165,9 +195,11 @@
                 width: 80%;
             }
 
+
             .searchField input {
                 height: 50px;
             }
+            
         }
     </style>
     <link rel="stylesheet" href="./style.css">
@@ -284,7 +316,7 @@
                     <span class="fa fa-solid fa-search"></span>
                 </div>
                 <div class="filterBtn">
-                    <button class="All">All</button>
+                    <button class="All" id="filterActivate">All</button>
                     <button class="Cheeze">Cheeze</button>
                     <button class="biryani">Biryani</button>
                     <button class="Paneer">Paneer</button>
