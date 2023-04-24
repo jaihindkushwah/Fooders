@@ -97,6 +97,8 @@ nav {
 
 /* Navbar expanded */
 .navbar {
+    
+    height: 70px;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -204,7 +206,7 @@ a.cart>p{
 
 /* Main page */
 .mainSection {
-    margin-top: 80px;
+    margin-top: 70px;
     width: 100vw;
     display: flex;
     justify-content: center;
