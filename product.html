@@ -14,6 +14,8 @@
         type="image/x-icon">
     <script src="./navbar.js" defer></script>
     <script src="product.js" defer></script>
+    
+    <link rel="stylesheet" href="./style.css">
 
 
     <style>
@@ -81,6 +83,8 @@
             background-color: white;
             padding: 10px 20px;
             border-radius: 30px;
+            min-width: 250px;
+            max-width: 500px;
         }
 
         .searchField input {
@@ -111,7 +115,8 @@
         .productContainer {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             /* grid-row-gap: 10px; */
         }
 
@@ -183,25 +188,27 @@
         /* */
 
         @media screen and (max-width:680px) {
-            .productContainer {
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                /* grid-row-gap: 10px; */
-            }
+            
 
             .searchField {
                 width: 80%;
+                
             }
 
 
             .searchField input {
-                height: 50px;
+                height: 30px;
+                font-size: 12px;
             }
+            .productSection .filterBtn button {
+                width: 60px;
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+            
             
         }
     </style>
-    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>

@@ -21,7 +21,7 @@ function createCartElement(elData,i){
                 <div class="name">${elData['name']}</div>
                 <div class="rating">Rating: ${elData['rating']}</div>
                 <div class="deliveryType">You are eligible for ${elData['deliveryType']} delivery.</div>
-                <div class="resturentName">${elData['shopName']}</div>
+                <div class="resturentName">${elData['shopName']} Hotel</div>
                 <div class="modificationBtns">
                     <div class="counter"><button id="subtractBtn">-</button><input type="text" name="" value="${elData["quantity"]}" class="${i}"><button id="addBtn">+</button></div>
                     <div class="removeFromCart"><button class="${i}">Delete</button></div>
