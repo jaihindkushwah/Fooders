@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p>Payment Success</p>
+    </body>
+    <script>
+        const bc = new BroadcastChannel('test_channel');
+        // A handler that only logs the event to the console:
+        bc.onmessage = function (ev) { console.log(ev); }
+        // Disconnect the channel
+        // bc.close();
+        var formData = document.sessionStorage["form-data"];
+        console.log(formData);
+    </script>
+</html>

@@ -57,7 +57,7 @@ nav {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 78px;
+    top: 69px;
     left: 0;
     background-color: #111;
     /* background: linear-gradient(to top, rgb(223, 222, 222), rgb(179, 178, 178) 50%,rgba(238, 238, 238, 0.04) 50%,#333 50%); */
