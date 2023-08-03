@@ -88,7 +88,7 @@ function deleteCartItem(){
             quantityIncreaseDecrease();
             deleteCartItem();
             totalPriceCalculate();
-            checkOut();
+            
 
             // window.location.reload();
         });
@@ -154,6 +154,7 @@ function totalPriceCalculate(){
     let packingFee="Free";
     let totalAmount=Number(totalPrices)-Number(discount);
     checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount);
+    checkOut();
 }
 totalPriceCalculate();
 
