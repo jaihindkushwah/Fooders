@@ -1,5 +1,7 @@
 // total item added in the cart
 const addedInCart=[];
+let productsData=[...productCatalogue];
+// console.log(productsData);
 window.onload=()=>{
     let storedItems=JSON.parse(localStorage.getItem('addedInCart'));
     if(storedItems!=null){
@@ -22,6 +24,16 @@ function filterBtnActivate(){
             });
             if(e.target){
                 e.target.id='filterActivate';
+                let clName=e.target.className;
+                console.log(clName);
+                if(clName==='All'){
+                    productsData=[...productCatalogue];
+                }else{
+                    let filterData=productCatalogue.filter((el)=>el.name.includes(clName));
+                    productsData=[...filterData];
+                }
+                console.log(productsData);
+                pushElementInContainer();
             }
         });
     })
@@ -38,25 +50,44 @@ filterBtnActivate();
 
 function pushElementInContainer(){
     let productContainer=document.querySelector('.productContainer');
-    for(let i=0;i<12;i++){
-        productContainer.innerHTML=createElement()+productContainer.innerHTML;
+    productContainer.innerHTML="";
+    productsData.sort((a,b)=>{
+        if(a.name<b.name){
+            return -1;
+        }
+        if(a.name>b.name){
+            return 1;
+        }
+        return 0;
+    }).forEach((el)=>{
+        productContainer.innerHTML+=createElement(el);
+    })
+    if(productsData.length===0){
+        productContainer.innerHTML=`<div style="text-align: center; color: red; font-size: 20px;">
+        ➡️ No data Available
+     </div>`;
     }
 }
+
 pushElementInContainer();
+
+
+
 
 
 function createElement(data){
    let el= `<div class="singleProduct">
                 <div>
-                    <img src="img1(640).jpg" alt=""/>
-                </div>
+                    <img src="${data.img}" alt=""/>
+
+                    </div>
                 <div style="padding:0px 10px;">
                 
-                <div class="name" data-name="Paneer">Paneer</div>
+                <div class="name" data-name="${data.name}">${data.name}</div>
                     <div class="rating" data-rating="">⭐⭐⭐⭐⭐</div>
                     
                     <div class="deliveryType" data-delivery="free">You are eligible for free delivery.</div>
-                    <div class="price" data-price="40">$ 40</div>
+                    <div class="price" data-price="${data.price}">$ ${data.price}</div>
                     <div style="display: flex;justify-content: center;"><button>Add To Card</button>
                     </div>
                 </div>

@@ -116,4 +116,123 @@ const nightlife=[
 
 
 
+const productCatalogue=[
+    {
+        img:'https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5-500x500.jpg',
+        name:'Paneer Butter Masala',
+        href:"https://www.vegrecipesofindia.com/recipes/paneer/#h-about-paneer",
+        price:60,
+   },
+   {
+        img:'https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/palak-paneer-1.jpg',
+        name:'Palak Paneer Recipe',
+        href:'https://www.vegrecipesofindia.com/palak-paneer/',
+        price:50,
+   },
+   {
+        img:'https://www.vegrecipesofindia.com/wp-content/uploads/2013/06/shahi-paneer-1-1.jpg',
+        name:'Shahi Paneer',
+        href:'https://www.vegrecipesofindia.com/shahi-paneer/',
+        price:56,
+   },
+   {
+        img:'https://www.vegrecipesofindia.com/wp-content/uploads/2015/01/shahi-paneer-korma-recipe.jpg',
+        name:'Paneer Korma',
+        href:'https://www.vegrecipesofindia.com/mughlai-shahi-paneer-korma-recipe/',
+        price:51,
+   },
+   {
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/awadhi-chicken-biryani.jpg.transform/845x440/image.jpg',
+        name:'Lucknowi or Awadhi Biryani',
+        href:'https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html',
+        price:45,
+   },
+    {
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/kolkata-biryani.jpg.transform/845x440/image.jpg',
+        name:'Kolkata Biryani',
+        href:"https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html",
+        price:48,
+   },
+   {
+        name:'Ambur biryani',
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/ambur-chicken-biryani.jpg.transform/845x440/image.jpg',
+        href:"https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html",
+        price:40,
+   },
+   {
+        name:'Hyderabadi Biryani',
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/hyderabadi-goat-biryani.jpg.transform/845x440/image.jpg',
+        href:"https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html",
+        price:26,
+   },
+   {
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/beef-kalyani-biryani.jpg.transform/845x440/image.jpg',
+        name:'Kalyani Biryani',
+        href:"https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html",
+        price:25,
+   },
+   {
+        img:'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/2/3/veg-biryani.jpg.transform/845x440/image.jpg',
+        name:'Kashmiri or Tahari Biryani',
+        href:"https://www.onmanorama.com/food/features/2021/02/03/different-biryanis-india.html",
+        price:22,
+   },{
+        img:'https://www.crazymasalafood.com/wp-content/images/EGG.jpg',
+        name:'Egg Noodles',
+        href:'https://crazymasalafood.com/top-20-types-noodles-famous-india/?expand_article=1',
+        price:20,
+   },
+   {
+        img:'https://www.crazymasalafood.com/wp-content/images/chowmeijn.jpg',
+        name:'Chowmein Noodles',
+        href:'https://crazymasalafood.com/top-20-types-noodles-famous-india/?expand_article=1',
+        price:30,
+   },
+   {
+        img:'https://www.crazymasalafood.com/wp-content/images/egg-plnt.jpg',
+        name:'Eggplant Pomodoro Noodle',
+        href:'https://crazymasalafood.com/top-20-types-noodles-famous-india/?expand_article=1',
+        price:32,
+   },
+   {
+        img:'https://www.crazymasalafood.com/wp-content/images/oats-9.jpg',
+        name:'Oats Noodles',
+        href:'https://crazymasalafood.com/top-20-types-noodles-famous-india/?expand_article=1',
+        price:38,
+   },
+   {
+        img:'https://static.toiimg.com/photo/64997216.cms?imgsize=381539',
+        name:"Paneer Kofta",
+        href:"https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms",
+        price:80
+   },
+   {
+        img:'https://static.toiimg.com/photo/64997215.cms?imgsize=346697',
+        name:'​Nargisi Kofta',
+        href:"https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997216",
+        price:43
+   },
+   {
+        img:'https://static.toiimg.com/photo/64997214.cms?imgsize=372704',
+        name:'Mutton Kofta',
+        href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997214',
+        price:65,
+   },
+   {
+        img:'https://static.toiimg.com/photo/64997213.cms?imgsize=327478',
+        name:'Malai Kofta',
+        href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997213',
+        price:70,
+   },{
+        img:'https://static.toiimg.com/photo/64997210.cms?imgsize=231581',
+        name:'Creamy Pea Kofta',
+        href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997210',
+        price:36
+   },{
+        img:"https://static.toiimg.com/photo/64997209.cms?imgsize=356654",
+        name:"Cauliflower Paneer Kofta Curry",
+        href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997217',
+        price:45
+   }
 
+]

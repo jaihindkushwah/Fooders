@@ -15,7 +15,7 @@ function createCartElement(elData,i){
     let div=document.createElement('div');
     div.className="items";
     let el=`<div class="image">
-                <div style='background-image:${elData['img']};'></div>
+                <div style='background-image:${elData['img']};background-size: 100% 100%;'></div>
             </div>
             <div class="specification">
                 <div class="name">${elData['name']}</div>
