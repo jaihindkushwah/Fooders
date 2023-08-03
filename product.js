@@ -14,7 +14,7 @@ window.onload=()=>{
 };
 
 
-// filter  Buttons Activate
+// filter  Buttons Activate and filter the products
 const filterBtns=document.querySelectorAll('.filterBtn button');
 function filterBtnActivate(){
     filterBtns.forEach((button)=>{
@@ -32,7 +32,7 @@ function filterBtnActivate(){
                     let filterData=productCatalogue.filter((el)=>el.name.includes(clName));
                     productsData=[...filterData];
                 }
-                console.log(productsData);
+                // console.log(productsData);
                 pushElementInContainer();
             }
         });
@@ -40,6 +40,32 @@ function filterBtnActivate(){
 }
 filterBtnActivate();
 
+
+// filter the products using inputs
+
+const searchFieldInput=document.querySelector('.searchField input');
+const searchButton=document.querySelector('.searchField button');
+
+searchButton.addEventListener('click',filterProductByInput);
+function filterProductByInput(){
+    let inputValue=searchFieldInput.value;
+    console.log(inputValue);
+    if(!inputValue){
+        alert("Please enter some input!");
+        return;
+    }
+    filterBtns.forEach((button)=>{
+        button.id='';
+        if(button.className==="All"){
+            button.id='filterActivate';
+        };
+    })
+    let filterData=productCatalogue.filter((el)=>el.name.toLowerCase().includes(inputValue.toLowerCase()));
+    productsData=[...filterData];
+    pushElementInContainer();
+    
+
+}
 
 
 
