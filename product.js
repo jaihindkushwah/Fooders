@@ -43,10 +43,20 @@ filterBtnActivate();
 
 // filter the products using inputs
 
+
 const searchFieldInput=document.querySelector('.searchField input');
 const searchButton=document.querySelector('.searchField button');
 
+// when button click
 searchButton.addEventListener('click',filterProductByInput);
+// when input click
+searchFieldInput.addEventListener('keypress',(e)=>{
+    if(e.key==="Enter"){
+        filterProductByInput();
+    }
+})
+
+
 function filterProductByInput(){
     let inputValue=searchFieldInput.value;
     console.log(inputValue);
@@ -63,8 +73,6 @@ function filterProductByInput(){
     let filterData=productCatalogue.filter((el)=>el.name.toLowerCase().includes(inputValue.toLowerCase()));
     productsData=[...filterData];
     pushElementInContainer();
-    
-
 }
 
 
@@ -113,7 +121,7 @@ function createElement(data){
                     <div class="rating" data-rating="">⭐⭐⭐⭐⭐</div>
                     
                     <div class="deliveryType" data-delivery="free">You are eligible for free delivery.</div>
-                    <div class="price" data-price="${data.price}">$ ${data.price}</div>
+                    <div class="price" data-price="${data.price}">₹ ${data.price}</div>
                     <div style="display: flex;justify-content: center;"><button>Add To Card</button>
                     </div>
                 </div>

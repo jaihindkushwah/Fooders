@@ -21,7 +21,7 @@ function featuredElementCreate(src,name,price){
     // 
     name1.textContent=name;
     // 
-    price1.innerHTML='$'+price;
+    price1.innerHTML='₹'+price;
     // 
     div.appendChild(div1);
     div.appendChild(name1);

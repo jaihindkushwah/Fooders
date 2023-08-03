@@ -27,7 +27,7 @@ function createCartElement(elData,i){
                     <div class="removeFromCart"><button class="${i}">Delete</button></div>
                 </div>
             </div>
-            <div class="price">$${elData["price"]}</div>`;
+            <div class="price">₹ ${elData["price"]}</div>`;
         div.innerHTML=el;
         addedProductInCart.appendChild(div);
 }
@@ -160,11 +160,11 @@ totalPriceCalculate();
 function checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,totalAmount){
     let el=`<div class="totalPrices">
     <p>Price(${noOfItems} Items)</p>
-    <p>$ ${totalPrices}</p>
+    <p>₹ ${totalPrices}</p>
     </div>
     <div class="totalDiscount">
         <p>Discount</p>
-        <p>$ -${discount}</p>
+        <p>₹ -${discount}</p>
     </div>
     <div class="deliveryCharge">
         <p>Delivery Charge</p>
@@ -176,24 +176,27 @@ function checkOutSection(noOfItems,totalPrices,discount,deliveryFee,packingFee,t
     </div>
     <div class="finalAmount">
         <h3>Total Amount:</h3>
-        <h3 id="finalAmount">$ <span>${totalAmount}</span></h3>
+        <h3 id="finalAmount">₹ <span>${totalAmount}</span></h3>
     </div>
-    <div class="totalSave free">You will save $ ${discount} on this order</div>
+    <div class="totalSave free">You will save ₹ ${discount} on this order</div>
     <button class="checkOutBtn">Proceed to Checkout</button>`;
     totalItems.innerHTML=el;
 }
 
 // Payment Integration;
-const checkOutBtn=document.querySelector('.checkOutBtn');
-const finalAmount=document.querySelector('#finalAmount>span');
+
 function checkOut(){
+    const checkOutBtn=document.querySelector('.checkOutBtn');
+    const finalAmount=document.querySelector('#finalAmount>span');
     checkOutBtn.addEventListener('click',()=>{
         if(finalAmount.innerHTML=="0"){
             alert("Please add some products in the cart.");
             return;
         }
         else{
-            
+            let amount=Number(finalAmount.innerHTML)*100;
+            paymentIntegration(amount);
+            console.log(finalAmount.innerHTML);
         }
         
     });
@@ -201,13 +204,45 @@ function checkOut(){
 checkOut();
 
 
-function paymentIntegration(){
-    
+function paymentIntegration(amount){
+   let options = {
+       "key": "rzp_test_oCuH8toxFLvO5u", 
+       "amount": `${amount}`, 
+       "currency": "INR",
+       "name": "Fooder free",
+       "description": "Pay & Checkout this Course, Upgrade your DSA Skill",
+       "handler": function (response){
+           console.log(response)
+           alert("Thank you for purchasing.");
+           list=[];
+          // document.postlink.submit();
+          document.location.href='/index.html';
+          
+       },
+       "prefill": {
+          //Here we are prefilling random contact
+         "contact":"9876543210", 
+           //name and email id, so while checkout
+         "name": "TJaihind kushwahah",  
+         "email": "jaihindkushwaha672001@gmail.com"
+       },
+      "notes" : {
+         "description":"Best Course for SDE placements",
+         "language":"Available in 4 major Languages JAVA, C/C++, Python, Javascript",
+         "access":"This course have Lifetime Access"
+       }, 
+       "theme": {
+           "color": "#2300a3"
+       }
+   };
+   let razorpayObject = new Razorpay(options);
+   console.log(razorpayObject);
+   razorpayObject.on('payment.failed', function (response){
+         console.log(response);
+         alert("This step of Payment Failed");
+   });
+    razorpayObject.open();
 }
-
-
-
-
 
 
 
