@@ -1,0 +1,49 @@
+<html>
+  <body>
+        <input type="email" name="" id="email" value="">
+        <input type="password" name="" id="password" value="">
+        <button class="btn">Login</button>
+  </body>
+</html>
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA_kPmQO-f8sDSj4GtpTIUNHN1GJPIS-sQ",
+    authDomain: "fooder-free-27ea7.firebaseapp.com",
+    projectId: "fooder-free-27ea7",
+    storageBucket: "fooder-free-27ea7.appspot.com",
+    messagingSenderId: "159231784792",
+    appId: "1:159231784792:web:e6f5e6003135e5589f972d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
+  // import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-auth.js'
+
+  const auth=getAuth(app);
+  
+  let email=document.querySelector('#email');
+  let password=document.querySelector('#password');
+  let loginBtn=document.querySelector('.btn');
+
+  loginBtn.addEventListener('click',userLogin);
+
+  async function userLogin(){
+    createUserWithEmailAndPassword(auth,email.value,password.value).
+    then((result)=>{console.log(result);
+    }).catch((err)=>{
+      console.log(err);
+    })
+    // console.log(e+" "+password.value);
+  }
+
+
+</script>
