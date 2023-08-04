@@ -1,8 +1,10 @@
 // Featured menu element creation
 const featuredDiv=document.querySelector('.featured-menu');
-window.onload=featuredMenu.forEach(el=>{
-    featuredDiv.appendChild(featuredElementCreate(el['img'],el['name'],el['price']));
-})
+if(featuredDiv){
+    window.onload=featuredMenu.forEach(el=>{
+        featuredDiv.appendChild(featuredElementCreate(el['img'],el['name'],el['price']));
+    })
+}
 
 function featuredElementCreate(src,name,price){
     let div=document.createElement('div');

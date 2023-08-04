@@ -119,3 +119,24 @@ socialButtons.forEach(el=>{
     })
 })
 
+
+// product data count update;
+const addedInCart1=[];
+// console.log(productsData);
+window.onload=()=>{
+    let storedItems=JSON.parse(localStorage.getItem('addedInCart'));
+    if(storedItems!=null){
+        storedItems.forEach(el=>{
+            addedInCart1.push(el);
+        });
+    }
+    updateCartIconNo();
+};
+
+function updateCartIconNo(){
+    document.querySelector('#cart>p').innerHTML=Number(addedInCart1.length);
+    document.querySelector('#cart1>p').innerHTML=Number(addedInCart1.length);
+}
+updateCartIconNo();
+
+window.onbeforeunload=()=>{localStorage.setItem('addedInCart',JSON.stringify(addedInCart1));}

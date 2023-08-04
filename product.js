@@ -12,6 +12,11 @@ window.onload=()=>{
 
     updateCartIconNo();
 };
+function updateCartIconNo(){
+    document.querySelector('#cart>p').innerHTML=Number(addedInCart.length);
+    document.querySelector('#cart1>p').innerHTML=Number(addedInCart.length);
+}
+updateCartIconNo();
 
 
 // filter  Buttons Activate and filter the products
@@ -135,13 +140,7 @@ function createElement(data){
 
 
 
-function updateCartIconNo(){
-    document.querySelector('#cart>p').innerHTML=Number(addedInCart.length);
-    document.querySelector('#cart1>p').innerHTML=Number(addedInCart.length);
-}
 
-
-updateCartIconNo();
 
 
 function addInCart(){

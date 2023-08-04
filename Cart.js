@@ -88,14 +88,18 @@ function deleteCartItem(){
             quantityIncreaseDecrease();
             deleteCartItem();
             totalPriceCalculate();
-            
-
+            updateCartIconNo();
             // window.location.reload();
         });
     
     })
 }
 deleteCartItem();
+
+function updateCartIconNo(){
+    document.querySelector('#cart>p').innerHTML=Number(list.length);
+    document.querySelector('#cart1>p').innerHTML=Number(list.length);
+}
 
 function changeValueAccordingInputChange(){
     let noOfItem=document.querySelectorAll('.counter input');
