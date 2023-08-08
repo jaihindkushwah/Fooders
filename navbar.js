@@ -90,19 +90,23 @@ function toScrollTop(){
 
 // login page
 const loginSection=document.querySelector('.loginSection');
-const loginBtn=document.querySelectorAll('.login');
+
 const mainSection=document.querySelector('.mainSection');
 
 
 // 
-loginBtn.forEach(el=>{
-    el.addEventListener('click',(e)=>{
-        if(e.target){
-            loginSection.style.display="inline";
-            
-        }
+function openLoginPage(){
+    const loginBtn=document.querySelectorAll('.login');
+    loginBtn.forEach(el=>{
+        el.addEventListener('click',(e)=>{
+            if(e.target){
+                loginSection.style.display="inline";
+                
+            }
+        })
     })
-})
+}
+openLoginPage();
 
 
 loginSection.addEventListener("click",(e)=>{

@@ -1188,6 +1188,7 @@ button {
 
 /* media screen on Width 360px */
 @media screen and (max-width:480px) {
+
     .collections{
         padding: 20px 0px;
     }
@@ -1230,6 +1231,9 @@ button {
     }
     .loginContent>*{
         margin: 5px;
+    }
+    .loginMain{
+        align-items: flex-start;
     }
 }
 
