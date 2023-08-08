@@ -873,7 +873,7 @@ hr {
     /* background-color: red; */
 }
 
-.loginSection input {
+.loginSection input,.loginSection textarea {
     height: 38px;
     /* background-color: bisque; */
     border-radius: 5px;
@@ -921,7 +921,9 @@ button {
     cursor: pointer;
 }
 
-.formContainer a {
+.formContainer .goToSingUpPage,.formContainer .goToLoginPage {
+    border: none;
+    background-color: white;
     color: blue;
     text-decoration: none;
     font-size: 15px;

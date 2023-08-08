@@ -92,7 +92,7 @@ function toScrollTop(){
 const loginSection=document.querySelector('.loginSection');
 const loginBtn=document.querySelectorAll('.login');
 const mainSection=document.querySelector('.mainSection');
-const closeBtn=document.querySelector('.close');
+
 
 // 
 loginBtn.forEach(el=>{
@@ -104,11 +104,11 @@ loginBtn.forEach(el=>{
     })
 })
 
-closeBtn.addEventListener('click',()=>{
-    loginSection.style.display="none";
-})
-loginSection.addEventListener("dblclick",()=>{
-    loginSection.style.display="none";
+
+loginSection.addEventListener("click",(e)=>{
+    if(e.target.className==="loginMain"){
+        loginSection.style.display="none";
+    }
 })
 
 const socialButtons=document.querySelectorAll('.social-account>button');
