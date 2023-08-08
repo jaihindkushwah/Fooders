@@ -2,7 +2,8 @@
   <body>
         <input type="email" name="" id="email" value="">
         <input type="password" name="" id="password" value="">
-        <button class="btn">Login</button>
+        <button class="btn">Login</button><br>
+        <button class="gBtn">Login Using Gmail</button>
   </body>
 </html>
 
@@ -25,7 +26,7 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
+  import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,GoogleAuthProvider ,signInWithPopup } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
   // import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-auth.js'
 
   const auth=getAuth(app);
@@ -33,6 +34,7 @@
   let email=document.querySelector('#email');
   let password=document.querySelector('#password');
   let loginBtn=document.querySelector('.btn');
+  let gLoginBtn=document.querySelector('.gBtn');
 
   loginBtn.addEventListener('click',userLogin);
 
@@ -43,6 +45,12 @@
       console.log(err);
     })
     // console.log(e+" "+password.value);
+
+  }
+  const Provider= new GoogleAuthProvider();
+  gLoginBtn.addEventListener('click',loginWithGmail);
+  async function loginWithGmail(){
+    signInWithPopup(auth,Provider).then((res)=>{console.log(res.user)}).catch((err)=>{console.log(err)});
   }
 
 </script>
