@@ -929,6 +929,12 @@ button {
     font-size: 15px;
     font-weight: 600;
 }
+.formContainer a {
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
 
 .loginMain .divide {
     width: 100%;

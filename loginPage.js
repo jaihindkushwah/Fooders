@@ -24,7 +24,7 @@ function createLoginSection(){
                                 <input type="password" placeholder="Password" required><br>
                                 <div class="checkbox"><input type="checkbox" name="" id="" required>Keep me signed in</div>
                                 <button type="submit">Sign in</button>
-                                <a href="">Forget password?</a>
+                                <a href="#">Forget password?</a>
                             </form>
                         </div>
                         <div>
