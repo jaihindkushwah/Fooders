@@ -1210,7 +1210,7 @@ button {
         width: 90%;
         display: grid;
         grid-template-columns: 1fr;
-        height: 100%;
+        height: 90%;
         /* border: 2px solid blue; */
         border-radius: 5px;
     }
@@ -1222,6 +1222,7 @@ button {
     }
     .formContainer{
         grid-row-start: 2;
+        padding: 25px 15px 20px;
     }
     .loginContent hr{
         display: none;
@@ -1237,6 +1238,11 @@ button {
     }
     .loginMain{
         align-items: flex-start;
+    }
+    .close{
+        font-size: 1.7rem;
+        margin-top: -15px;
+        margin-right: 0px;
     }
 }
 
