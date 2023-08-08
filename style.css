@@ -1126,6 +1126,7 @@ button {
         display: grid;
         grid-template-columns: 1fr;
         height: 100%;
+        
         /* border: 2px solid blue; */
         border-radius: 5px;
         /* display: flex;
@@ -1138,12 +1139,14 @@ button {
     }
     .loginContent{
         grid-row-start:1;
+        grid-column: 1/-1;
         width: 100%;
         min-height: 100px;
         grid-row-end: 2;
     }
     .formContainer{
         grid-row-start: 2;
+        grid-column: 1/-1;
     }
     .loginContent hr{
         width: 50%;
