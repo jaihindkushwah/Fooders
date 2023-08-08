@@ -83,10 +83,6 @@ function filterProductByInput(){
 
 
 
-
-
-
-
 function pushElementInContainer(){
     let productContainer=document.querySelector('.productContainer');
     productContainer.innerHTML="";
@@ -105,6 +101,9 @@ function pushElementInContainer(){
         productContainer.innerHTML=`<div style="text-align: center; color: red; font-size: 20px;">
         ➡️ No data Available
      </div>`;
+    }
+    else{
+        addInCart();
     }
 }
 

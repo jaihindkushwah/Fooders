@@ -10,7 +10,7 @@ function createFooter(){
                 </div>
                 <div class="footer-links">
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="#about-us">About</a></li>
+                    <li><a href="./index.html#about-us">About</a></li>
                     <li><a href="#">Help Center</a></li>
                     <li><a href="#">Jobs</a></li>
                     <li><a href="#">Terms of Use</a></li>

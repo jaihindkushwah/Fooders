@@ -12,7 +12,7 @@ function createNavBar(){
             </div>
             <div id="mySidenav" class="sidenav">
                 <a href="./index.html">Home</a>
-                <a href="#about-us">About</a>
+                <a href="./index.html#about-us">About</a>
                 <a href="./product.html">FOOD CATALOGUE</a>
                 <a href="./Contact.html">Contacts</a>
 
@@ -27,7 +27,7 @@ function createNavBar(){
 
                 <div class="nav-items">
                     <li class="home"><a href="./index.html">HOME</a></li>
-                    <li class="about"><a href="#about-us">ABOUT</a></li>
+                    <li class="about"><a href="./index.html#about-us">ABOUT</a></li>
                     <li class="catalogue"><a href="./product.html">FOOD CATALOGUE</a></li>
                     <li class="contact"><a href="./Contact.html">CONTACTS</a></li>
                 </div>

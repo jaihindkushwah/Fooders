@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fooder</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,7 +22,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        main{
+        main.contactFormContaniner {
             
             min-height: 50vh;
             display: flex;
@@ -33,7 +32,7 @@
             padding: 30px;
             
         }
-        .contactForm{
+        .contactFormContaniner .contactForm{
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -48,41 +47,41 @@
             border: 2px solid #ccc;
         }
         
-        form {
+        .contactFormContaniner form {
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 20px;  
         }
         
-        form > div{
+        .contactFormContaniner form > div{
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 10px;
             z-index: 4;
         }
-        form > div label{
+        .contactFormContaniner form > div label{
             /* width: 240px; */
             display: flex;
             justify-content: space-between;
             margin: 2px;
             /* background-color: red; */
         }
-        form div input,form div textarea{
+        .contactFormContaniner form div input, .contactFormContaniner form div textarea{
             font-size: 1.2rem;
             /* width: 20px; */
             height: 25px;
             font-weight: 100;
         }
-        form button{
+        .contactFormContaniner form button{
             padding: 5px 20px;
             font-size: 1rem;
             cursor: pointer;
             
         }
         @media screen and (max-width:640px) {
-            form > div{
+            .contactFormContaniner  form > div{
                 display: grid;
                 grid-template-columns: 1fr;
                 align-items: center;
@@ -93,29 +92,29 @@
             }
         }
         @media screen and (max-width:480px) {
-            form > div{
+            .contactFormContaniner  form > div{
                 display: grid;
                 grid-template-columns: 1fr;
                 align-items: center;
                 gap: 10px;
             }
-            .contactForm{
+            .contactFormContaniner  .contactForm{
                 padding: 20px;
                 gap: 25px;
             }
-            main{
+             main.contactFormContaniner {
             /* flex-direction: column; */
             padding: 10px;
             display: inline;
             width: 105%;
             
             }
-            form div input,form div textarea{
+            .contactFormContaniner form div input,.contactFormContaniner form div textarea{
                 font-size: 1rem;
             }
         }
 
-        .loader {
+        .contactFormContaniner .loader {
                 position: relative;
                 border-radius: 30px;
                 padding: 5px;
@@ -126,7 +125,7 @@
                 overflow: hidden;
                 z-index: 2;
             }
-            .loader:after{
+            .contactFormContaniner   .loader:after{
                 content: '';
                 position: absolute;
                 inset: 8px;
@@ -134,7 +133,7 @@
                 background: transparent;
                 z-index: 2;
             }
-            .loader:before{
+            .contactFormContaniner  .loader:before{
                 content: '';
                 position: absolute;
                 inset: -15px;
@@ -157,6 +156,7 @@
                 }
             }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="loginSection">
@@ -171,7 +171,7 @@
             <!-- using createNavBar function  -->
         </nav>
     </section>
-    <main>
+    <main class="contactFormContaniner">
         <div class="loader">
             <section class="contactForm">
                 <h2>Contact Form</h2>

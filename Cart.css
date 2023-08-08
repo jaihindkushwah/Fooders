@@ -531,7 +531,7 @@ a.cart>p{
     height: 100%;
     position: fixed;
     animation: show_toast 0.8s ease forwards;
-    z-index: 2;
+    z-index: 100;
 }
 @keyframes show_toast {
     0%{
