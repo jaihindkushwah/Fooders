@@ -1215,9 +1215,12 @@ button {
         border-radius: 5px;
     }
     .loginContent{
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px 20px;
         grid-row-start: 1;
         width: 100%;
-        min-height: 100px;
+        min-height: 100%;
         grid-row-end: 2;
     }
     .formContainer{
@@ -1228,19 +1231,19 @@ button {
         display: none;
     }
     .loginContent p{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .loginContent h3{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .loginContent>*{
-        margin: 5px;
+        margin: 2px 5px;
     }
     .loginMain{
         align-items: flex-start;
     }
     .close{
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         margin-top: -15px;
         margin-right: 0px;
     }
