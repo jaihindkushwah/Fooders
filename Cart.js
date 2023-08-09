@@ -139,7 +139,7 @@ changeValueAccordingInputChange();
 function forEmptyCart(){
     let cartHeading=document.querySelector('.added-product>h1');
     if(cartHeading.nextElementSibling.innerHTML==""){
-        cartHeading.innerHTML='Shopping Cart is Empty.<p>For more shopping please go to <a href="./index.html">Home page</a>.</p>'
+        cartHeading.innerHTML='Shopping Cart is Empty.<p>For more shopping please go to <a href="./product.html">Food Catalogue page</a>.</p>'
     }
     else{
         cartHeading.innerHTML="Shopping Cart";

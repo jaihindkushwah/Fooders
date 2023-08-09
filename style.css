@@ -47,7 +47,7 @@ nav {
     position:fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 20;
     /* margin-bottom: 10px; */
 }
 
@@ -1017,6 +1017,7 @@ button {
 }
 
 @media screen and (max-width:660px) {
+    
     .featured {
         max-width: 100vw;
         padding: 40px;
@@ -1057,8 +1058,8 @@ button {
     .bars {
         display: block;
         position: fixed;
-        top: 30px;
-        left: 30px;
+        top: 25px;
+        left: 25px;
         font-size: 1.3rem;
     }
 
@@ -1197,7 +1198,13 @@ button {
 
 /* media screen on Width 360px */
 @media screen and (max-width:480px) {
-
+    
+    .site-name h2{
+        font-size: 1.2rem;
+    }
+    .site-name p{
+        font-size: 11px;
+    }
     .collections{
         padding: 20px 0px;
     }

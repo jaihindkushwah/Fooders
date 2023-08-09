@@ -98,7 +98,7 @@ const dining=[
         "p":"20 Unique Dining Places"
     },
     {
-        "img":"",
+        "img":"https://robbreport.com/wp-content/uploads/2019/06/treepod-dining-experience2-at-soneva-kiri-by-cat-vinton.jpg?w=400",
         "p":"10 Forest Dining Places"
     },
     {
@@ -111,6 +111,9 @@ const nightlife=[
     {
         "img":"https://img.traveltriangle.com/blog/wp-content/uploads/2018/06/Cover5.jpg",
         "p":"12 Lit Party Places"
+    },{
+        "img":'https://img.traveltriangle.com/blog/wp-content/uploads/2018/06/best_nightlife_blogs_los_angeles_FB_AND_COVER_700x367.jpg',
+        'p':"Night Life at top place"
     }
 ];
 
@@ -207,12 +210,6 @@ const productCatalogue=[
         price:80
    },
    {
-        img:'https://static.toiimg.com/photo/64997215.cms?imgsize=346697',
-        name:'​Nargisi Kofta',
-        href:"https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997216",
-        price:43
-   },
-   {
         img:'https://static.toiimg.com/photo/64997214.cms?imgsize=372704',
         name:'Mutton Kofta',
         href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997214',
@@ -233,6 +230,71 @@ const productCatalogue=[
         name:"Cauliflower Paneer Kofta Curry",
         href:'https://recipes.timesofindia.com/articles/features/10-koftas-that-are-so-delicious-you-would-want-to-try-them-now/photostory/64997202.cms?picid=64997217',
         price:45
-   }
+   },
+   {
+        "img":"https://assets.epicurious.com/photos/575991f3973781fc02c2a827/6:4/w_1600,c_limit/EP_06062016_Vanilla-Buttermilk-Wedding-Cake-with-Raspberries-and-Orange-Cream-Cheese-Frosting.jpg",
+        name:"Butter Cake",
+        href:"https://www.epicurious.com/expert-advice/types-of-cake-glossary-article",
+        price:90
+   },
+    {   img:"https://assets.epicurious.com/photos/57c6f789082060f11022b586/6:4/w_1600,c_limit/no-recipe-required-pound-cake-lemon-poppy-seed-30082016.jpg",
+        name:"Pound Cake",
+        href:"https://www.epicurious.com/expert-advice/types-of-cake-glossary-article",
+        price:60
+    },
+    {   img:"https://assets.epicurious.com/photos/5af31a94fddd026b70f8c8e7/6:4/w_1600,c_limit/french-biscuit-cake-050918.jpg",
+        name:"Biscuit Cake",
+        href:"https://www.epicurious.com/expert-advice/types-of-cake-glossary-article",
+        price:80
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_623344781.jpg.webp",
+        name:"Cheese Pizza",
+        price:48,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_570541132.jpg.webp",
+        name:"Veggie Pizza",
+        price:60,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_514457074.jpg.webp",
+        name:"Pepperoni Pizza",
+        price:38,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_548340295.jpg.webp",
+        name:"Meat Pizza",
+        price:70,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_184944413.jpg.webp",
+        name:"BBQ Chicken Pizza",
+        price:80,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://www.ezcater.com/lunchrush/wp-content/uploads/sites/2/2017/10/shutterstock_244706695.jpg.webp",
+        name:"Supreme Pizza",
+        price:68,
+        href:"https://www.ezcater.com/lunchrush/office/most-popular-types-of-pizza-around-country/",
+    },
+    {
+        img:"https://c.ndtvimg.com/o6fmnhs_burger_625x300_20_July_18.jpg",
+        name:"Butter Chicken Twin Burgers",
+        price:20,
+        href:"https://food.ndtv.com/lists/10-best-burger-recipes-701308"
+    },
+    {
+        img:"https://i.ndtvimg.com/i/2016-05/lamb-burger_625x350_81464592492.jpg",
+        name:"Lamb Burger with Radish Slaw",
+        price:30,
+        href:"https://food.ndtv.com/lists/10-best-burger-recipes-701308"
+    }
 
+   ,...featuredMenu
 ]

@@ -1,4 +1,4 @@
-// Side bar feature
+ // Side bar feature
 
 const navBar=document.querySelector('nav');
 function createNavBar(){
@@ -34,18 +34,22 @@ function createNavBar(){
                 <!-- book directly -->
                 <div class="book" id="book">
                     <a href="Cart.html" class="cart" id="cart"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a>
-                    <button class="login" id="login"><i class="fa-solid fa-user"></i> Login</button>
+                    <button class="login"><i class="fa-solid fa-user"></i> Login</button>
                     <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
                     
                 </div>
                 <div class="user">
                     <a href="Cart.html" class="cart" id="cart1"><p>0</p><i class="fa-solid fa-shopping-cart"></i></a>
-                    <div class="login "><i class="fa-solid fa-user-circle"></i></div>
+                    <div class="login"><i class="fa-solid fa-user-circle"></i></div>
+                    <!-- <button class="log-out"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Log out</button> -->
                 </div>
             </div>`;
     navBar.innerHTML=el;
 }
 createNavBar();
+
+
+
 
 
 const bar1=document.querySelector('.bar1');

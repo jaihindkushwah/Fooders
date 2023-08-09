@@ -38,19 +38,19 @@ const diningImg=document.querySelector(".diningImg");
 const deliveryImg=document.querySelector(".deliveryImg");
 
 window.onload=delivery.forEach(el=>{
-    deliveryImg.innerHTML+=collectionElementCreate(el["img"],el["p"]);
+    deliveryImg.innerHTML+=collectionElementCreate(el["img"],el["p"],"./product.html");
 })
 
 window.onload=dining.forEach(el=>{
-    diningImg.innerHTML+=collectionElementCreate(el["img"],el["p"]);
+    diningImg.innerHTML+=collectionElementCreate(el["img"],el["p"],"https://www.dineout.co.in/");
 })
 window.onload=nightlife.forEach(el=>{
-    nightlifeImg.innerHTML+=collectionElementCreate(el["img"],el["p"]);
+    nightlifeImg.innerHTML+=collectionElementCreate(el["img"],el["p"],"https://www.google.com/search?q=night+life");
 })
 
 
-function collectionElementCreate(src,content){
-    let el=`<div><img src="${src}" alt=""></img><p>${content}</p></div>`;
+function collectionElementCreate(src,content,link){
+    let el=`<div><a href="${link}"><img src="${src}" alt=""></img></a><p>${content}</p></div>`;
     return el;
 }
 
