@@ -119,14 +119,6 @@ loginSection.addEventListener("click",(e)=>{
     }
 })
 
-const socialButtons=document.querySelectorAll('.social-account>button');
-
-socialButtons.forEach(el=>{
-    el.addEventListener('click',()=>{
-        alert('This is not available yet.')
-    })
-})
-
 
 // product data count update;
 const addedInCart1=[];

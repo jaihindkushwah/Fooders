@@ -11,9 +11,9 @@ function createLoginSection(){
                     <div class="formContainer">
                         <div class="social-account">
                             <div class="close"><i class="fa-solid fa-xmark"></i></div>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
+                            <button class="loginWithFaceBook"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                            <button class="loginWithGmail"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                            <button class="loginWithApple"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
                         </div>
                         <div class="divide">
                             <hr>&nbsp; or &nbsp;<hr>
@@ -35,6 +35,7 @@ function createLoginSection(){
             </div>`
     loginSections.innerHTML=el;
     toggleSignInOrSignUpPage();
+    LoginButtonsAlert();
 }
 createLoginSection();
 
@@ -49,9 +50,9 @@ function createSignUpSection(){
                     <div class="formContainer">
                     <div class="social-account">
                         <div class="close"><i class="fa-solid fa-xmark"></i></div>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
-                            <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
+                            <button class="loginWithFaceBook"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/20px-Facebook_f_logo_%282021%29.svg.png" alt=""> <p>Continue with Facebook</p></button>
+                            <button class="loginWithGmail"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt=""> <p>Continue with Google</p></button>
+                            <button class="loginWithApple"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/20px-Apple_logo_black.svg.png" alt=""> <p>Continue with Apple</p></button>
                         </div>
                         <div class="divide">
                             <hr>&nbsp; or &nbsp;<hr>
@@ -74,6 +75,7 @@ function createSignUpSection(){
             </div>`
         loginSections.innerHTML=el;
         toggleSignInOrSignUpPage();
+        LoginButtonsAlert();
 }
 // createSignUpSection();
 
@@ -101,6 +103,20 @@ function toggleSignInOrSignUpPage(){
         })
     }
 }
+
+function LoginButtonsAlert(){
+    const socialButtons=document.querySelectorAll('.social-account>button');
+    socialButtons.forEach((button)=>{
+        button.addEventListener("click",(e)=>{
+            if(e.currentTarget.className!=="loginWithGmail"){
+                alert("This is not available yet.");
+            }
+        })
+    })
+}
+
+
+
 
 function closeLoginPage(){
     const closeBtn=document.querySelector('.close');
