@@ -16,7 +16,7 @@ const featuredMenu=[
     },
     {
         "name":"Noodles",
-        "img":"https://cdn3.mydukaan.io/app/image/500x500/?url=https://mydukaan-prod-new.s3.amazonaws.com/99865/8f28a60c-e01b-45f2-9b9c-094ab19230f6.png",
+        "img":"https://www.cookwithmanali.com/wp-content/uploads/2021/08/Schezwan-Noodles-500x375.jpg",
         "price":"5"
     },
     {
